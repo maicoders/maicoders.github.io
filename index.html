@@ -1,117 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>maicoders | Mobile App Developer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <style>
-        body { 
-            background-color: #030712; 
-            color: #f3f4f6; 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            overflow-x: hidden;
-        }
-        .glow {
-            position: absolute;
-            width: 400px;
-            height: 400px;
-            background: radial-gradient(circle, rgba(244,114,182,0.15) 0%, rgba(167,139,250,0.05) 50%, transparent 100%);
-            border-radius: 50%;
-            z-index: -1;
-            filter: blur(40px);
-        }
-        .glass-card {
-            background: rgba(17, 24, 39, 0.7);
-            backdrop-filter: blur(12px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-        }
-        .glass-card:hover {
-            border-color: rgba(244, 114, 182, 0.4);
-            transform: translateY(-4px);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maicoders | Sci-Fi Developer Portfolio</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Inter',sans-serif;
+  background:#020617;
+  color:#e2e8f0;
+  overflow-x:hidden;
+  cursor:none;
+}
+canvas{position:fixed;top:0;left:0;z-index:-1}
+
+/* Glowing cursor */
+.cursor{
+  position:fixed;
+  width:20px;height:20px;
+  border-radius:50%;
+  background:#22c55e;
+  pointer-events:none;
+  box-shadow:0 0 20px #22c55e,0 0 40px #22c55e;
+  transform:translate(-50%,-50%);
+}
+
+header{
+  padding:40px;text-align:center;
+  transform:translateZ(0);
+}
+h1{
+  font-family:'Orbitron';font-size:3rem;
+  color:#22c55e;text-shadow:0 0 15px #22c55e;
+}
+.subtitle{opacity:.7}
+
+.section{padding:60px 20px;max-width:1100px;margin:auto}
+.card{
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(34,197,94,0.3);
+  border-radius:20px;padding:25px;margin:20px 0;
+  transition:.3s;
+}
+.card:hover{transform:translateY(-8px) scale(1.02)}
+
+.skills, .projects{display:grid;gap:15px}
+.skills{grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.projects{grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+
+.skill,.project{
+  background:#020617;padding:15px;border-radius:12px;
+  border:1px solid rgba(34,197,94,0.2);
+}
+
+.btn{
+  display:inline-block;margin-top:10px;padding:10px 20px;
+  background:#22c55e;color:#020617;border-radius:10px;text-decoration:none;
+}
+
+/* XP BAR */
+.xp-container{margin-top:15px}
+.xp-bar{
+  width:100%;height:12px;background:#111;border-radius:10px;overflow:hidden;
+}
+.xp-fill{
+  height:100%;width:70%;background:#22c55e;box-shadow:0 0 10px #22c55e;
+  animation:xpAnim 2s ease forwards;
+}
+@keyframes xpAnim{from{width:0}to{width:70%}}
+
+/* Achievements */
+.achievements{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
+.badge{
+  padding:8px 12px;border-radius:10px;
+  background:#111;border:1px solid #22c55e;font-size:0.8rem;
+}
+
+footer{text-align:center;padding:30px;opacity:.6}
+</style>
 </head>
-<body class="antialiased">
+<body>
+<canvas id="particles"></canvas>
+<div class="cursor" id="cursor"></div>
 
-    <div class="glow top-[-100px] left-[-100px]"></div>
-    <div class="glow bottom-[-100px] right-[-100px]"></div>
+<header data-speed="2">
+  <h1>MAICODERS</h1>
+  <p class="subtitle">Leveling up digital experiences</p>
+  <div class="xp-container">
+    <p>Level 7 Developer</p>
+    <div class="xp-bar"><div class="xp-fill"></div></div>
+  </div>
+</header>
 
-    <main class="max-w-4xl mx-auto px-6 py-20">
-        
-        <header class="mb-20 text-center md:text-left">
-            <div class="inline-flex items-center px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold uppercase tracking-widest mb-6">
-                <span class="relative flex h-2 w-2 mr-2">
-                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
-                    <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
-                </span>
-                Available for Collaboration
-            </div>
-            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-4">
-                mai<span class="gradient-text">coders</span>
-            </h1>
-            <p class="text-xl text-gray-400 max-w-xl leading-relaxed">
-                Crafting seamless mobile experiences with <span class="text-white font-semibold">Flutter</span> and <span class="text-white font-semibold">Jetpack Compose</span>. 
-                Focused on minimalist UI and high-performance architecture.
-            </p>
-        </header>
+<section class="section" data-speed="1">
+  <div class="card">
+    <h2>👨‍🚀 About</h2>
+    <p>Creative developer building immersive and gamified apps.</p>
+  </div>
 
-        <section class="mb-24">
-            <h2 class="text-2xl font-bold mb-8 flex items-center">
-                <span class="w-8 h-[1px] bg-pink-500 mr-4"></span>
-                Featured Work
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="glass-card p-8 rounded-3xl">
-                    <div class="text-3xl mb-4">✨</div>
-                    <h3 class="text-2xl font-bold mb-2">Glucia</h3>
-                    <p class="text-gray-400 mb-6">A modern utility application built with a focus on rose-pink aesthetics and Material 3 design principles.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Flutter</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">UI/UX</span>
-                    </div>
-                </div>
+  <div class="card">
+    <h2>⚡ Skills</h2>
+    <div class="skills">
+      <div class="skill">Flutter</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Firebase</div>
+      <div class="skill">UI/UX</div>
+      <div class="skill">Game Systems</div>
+    </div>
+  </div>
 
-                <div class="glass-card p-8 rounded-3xl">
-                    <div class="text-3xl mb-4">🧭</div>
-                    <h3 class="text-2xl font-bold mb-2">Al-Murshid</h3>
-                    <p class="text-gray-400 mb-6">Localized guidance and architectural excellence, delivering structured content with a focus on accessibility.</p>
-                    <div class="flex gap-2">
-                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Compose</span>
-                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Architecture</span>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <div class="card">
+    <h2>🏆 Achievements</h2>
+    <div class="achievements">
+      <div class="badge">🚀 10K Users</div>
+      <div class="badge">⚡ Fast Builder</div>
+      <div class="badge">🎮 Gamification Expert</div>
+    </div>
+  </div>
 
-        <section class="mb-24">
-            <div class="glass-card p-10 rounded-[3rem] text-center">
-                <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 font-bold mb-8">Technical Stack</h2>
-                <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
-                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Android SDK</span>
-                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Flutter/Dart</span>
-                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Firebase</span>
-                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Material Design 3</span>
-                </div>
-            </div>
-        </section>
+  <div class="card">
+    <h2>🚀 Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Islamic App</h3>
+        <p>Smart prayer tracking system.</p>
+        <a href="#" class="btn">Launch</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <footer class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5">
-            <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2026 maicoders. All rights reserved.</p>
-            <div class="flex gap-8">
-                <a href="/app-ads.txt" class="text-sm font-bold text-pink-400/80 hover:text-pink-400 transition-colors tracking-widest uppercase">App-Ads.txt</a>
-                <a href="mailto:contact@maicoders.com" class="text-sm font-bold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Contact</a>
-            </div>
-        </footer>
+<footer>© 2026 Maicoders</footer>
 
-    </main>
+<script>
+// Cursor glow
+const cursor=document.getElementById('cursor');
+document.addEventListener('mousemove',e=>{
+  cursor.style.left=e.clientX+'px';
+  cursor.style.top=e.clientY+'px';
+});
 
+// Parallax
+window.addEventListener('scroll',()=>{
+  document.querySelectorAll('[data-speed]').forEach(el=>{
+    const speed=el.getAttribute('data-speed');
+    el.style.transform=`translateY(${window.scrollY/speed}px)`;
+  });
+});
+
+// Particles
+const canvas=document.getElementById('particles');
+const ctx=canvas.getContext('2d');
+canvas.width=window.innerWidth;
+canvas.height=window.innerHeight;
+let particles=[];
+
+for(let i=0;i<80;i++){
+  particles.push({
+    x:Math.random()*canvas.width,
+    y:Math.random()*canvas.height,
+    r:Math.random()*2,
+    dx:(Math.random()-0.5),
+    dy:(Math.random()-0.5)
+  });
+}
+
+function animate(){
+  ctx.clearRect(0,0,canvas.width,canvas.height);
+  ctx.fillStyle='#22c55e';
+  particles.forEach(p=>{
+    p.x+=p.dx;
+    p.y+=p.dy;
+    ctx.beginPath();
+    ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+    ctx.fill();
+  });
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
 </body>
 </html>
