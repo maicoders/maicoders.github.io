@@ -3,70 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dev Pro | Mobile Solutions</title>
+    <title>maicoders | Mobile App Developer</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&display=swap" rel="stylesheet">
     <style>
-        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
-        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
-        .accent-gradient { background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        body { 
+            background-color: #030712; 
+            color: #f3f4f6; 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            overflow-x: hidden;
+        }
+        .glow {
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(244,114,182,0.15) 0%, rgba(167,139,250,0.05) 50%, transparent 100%);
+            border-radius: 50%;
+            z-index: -1;
+            filter: blur(40px);
+        }
+        .glass-card {
+            background: rgba(17, 24, 39, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            border-color: rgba(244, 114, 182, 0.4);
+            transform: translateY(-4px);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     </style>
 </head>
-<body class="min-h-screen flex flex-col items-center justify-center p-6">
+<body class="antialiased">
 
-    <div class="glass max-w-2xl w-full rounded-3xl p-8 md:p-12 shadow-2xl">
-        <header class="text-center mb-10">
-            <div class="inline-block px-4 py-1 rounded-full border border-pink-500/30 text-pink-400 text-sm font-medium mb-4">
-                Available for New Projects
+    <div class="glow top-[-100px] left-[-100px]"></div>
+    <div class="glow bottom-[-100px] right-[-100px]"></div>
+
+    <main class="max-w-4xl mx-auto px-6 py-20">
+        
+        <header class="mb-20 text-center md:text-left">
+            <div class="inline-flex items-center px-3 py-1 rounded-full bg-pink-500/10 border border-pink-500/20 text-pink-400 text-xs font-bold uppercase tracking-widest mb-6">
+                <span class="relative flex h-2 w-2 mr-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-pink-400 opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-pink-500"></span>
+                </span>
+                Available for Collaboration
             </div>
-            <h1 class="text-5xl font-bold tracking-tight mb-2">Dev<span class="accent-gradient">Pro</span></h1>
-            <p class="text-slate-400 text-lg">Building the future of mobile experiences.</p>
+            <h1 class="text-6xl md:text-7xl font-extrabold tracking-tight mb-4">
+                mai<span class="gradient-text">coders</span>
+            </h1>
+            <p class="text-xl text-gray-400 max-w-xl leading-relaxed">
+                Crafting seamless mobile experiences with <span class="text-white font-semibold">Flutter</span> and <span class="text-white font-semibold">Jetpack Compose</span>. 
+                Focused on minimalist UI and high-performance architecture.
+            </p>
         </header>
 
-        <section class="space-y-8">
-            <div>
-                <h2 class="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">Core Expertise</h2>
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="glass p-4 rounded-xl text-center">
-                        <span class="block text-xl">📱</span>
-                        <span class="text-sm font-medium">Flutter / Android</span>
-                    </div>
-                    <div class="glass p-4 rounded-xl text-center">
-                        <span class="block text-xl">🎨</span>
-                        <span class="text-sm font-medium">Material 3 UI/UX</span>
+        <section class="mb-24">
+            <h2 class="text-2xl font-bold mb-8 flex items-center">
+                <span class="w-8 h-[1px] bg-pink-500 mr-4"></span>
+                Featured Work
+            </h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="text-3xl mb-4">✨</div>
+                    <h3 class="text-2xl font-bold mb-2">Glucia</h3>
+                    <p class="text-gray-400 mb-6">A modern utility application built with a focus on rose-pink aesthetics and Material 3 design principles.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Flutter</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">UI/UX</span>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <h2 class="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">Featured Projects</h2>
-                <div class="space-y-3">
-                    <div class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-white/10">
-                        <div>
-                            <h3 class="font-semibold">Glucia</h3>
-                            <p class="text-sm text-slate-400">Next-gen utility platform.</p>
-                        </div>
-                        <span class="text-pink-400">→</span>
-                    </div>
-                    <div class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-white/10">
-                        <div>
-                            <h3 class="font-semibold">Al-Murshid</h3>
-                            <p class="text-sm text-slate-400">Localized guidance application.</p>
-                        </div>
-                        <span class="text-pink-400">→</span>
+                <div class="glass-card p-8 rounded-3xl">
+                    <div class="text-3xl mb-4">🧭</div>
+                    <h3 class="text-2xl font-bold mb-2">Al-Murshid</h3>
+                    <p class="text-gray-400 mb-6">Localized guidance and architectural excellence, delivering structured content with a focus on accessibility.</p>
+                    <div class="flex gap-2">
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Compose</span>
+                        <span class="px-3 py-1 bg-white/5 rounded-lg text-xs font-medium border border-white/10">Architecture</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <footer class="mt-12 pt-8 border-t border-white/5 text-center">
-            <p class="text-slate-500 text-sm">© 2026 Dev Pro Mobile Solutions</p>
-            <div class="mt-4 flex justify-center gap-6 text-slate-400">
-                <a href="/app-ads.txt" class="hover:text-pink-400 transition-colors">app-ads.txt</a>
-                <a href="#" class="hover:text-pink-400 transition-colors">GitHub</a>
-                <a href="mailto:hello@example.com" class="hover:text-pink-400 transition-colors">Contact</a>
+        <section class="mb-24">
+            <div class="glass-card p-10 rounded-[3rem] text-center">
+                <h2 class="text-sm uppercase tracking-[0.3em] text-gray-500 font-bold mb-8">Technical Stack</h2>
+                <div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-80">
+                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Android SDK</span>
+                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Flutter/Dart</span>
+                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Firebase</span>
+                    <span class="text-lg font-semibold hover:text-pink-400 transition-colors">Material Design 3</span>
+                </div>
+            </div>
+        </section>
+
+        <footer class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-white/5">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2026 maicoders. All rights reserved.</p>
+            <div class="flex gap-8">
+                <a href="/app-ads.txt" class="text-sm font-bold text-pink-400/80 hover:text-pink-400 transition-colors tracking-widest uppercase">App-Ads.txt</a>
+                <a href="mailto:contact@maicoders.com" class="text-sm font-bold text-gray-400 hover:text-white transition-colors tracking-widest uppercase">Contact</a>
             </div>
         </footer>
-    </div>
+
+    </main>
 
 </body>
 </html>
