@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Pro | Mobile Solutions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif; }
+        .glass { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .accent-gradient { background: linear-gradient(135deg, #f472b6 0%, #a78bfa 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-6">
+
+    <div class="glass max-w-2xl w-full rounded-3xl p-8 md:p-12 shadow-2xl">
+        <header class="text-center mb-10">
+            <div class="inline-block px-4 py-1 rounded-full border border-pink-500/30 text-pink-400 text-sm font-medium mb-4">
+                Available for New Projects
+            </div>
+            <h1 class="text-5xl font-bold tracking-tight mb-2">Dev<span class="accent-gradient">Pro</span></h1>
+            <p class="text-slate-400 text-lg">Building the future of mobile experiences.</p>
+        </header>
+
+        <section class="space-y-8">
+            <div>
+                <h2 class="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">Core Expertise</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="glass p-4 rounded-xl text-center">
+                        <span class="block text-xl">📱</span>
+                        <span class="text-sm font-medium">Flutter / Android</span>
+                    </div>
+                    <div class="glass p-4 rounded-xl text-center">
+                        <span class="block text-xl">🎨</span>
+                        <span class="text-sm font-medium">Material 3 UI/UX</span>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <h2 class="text-sm uppercase tracking-widest text-slate-500 font-semibold mb-4">Featured Projects</h2>
+                <div class="space-y-3">
+                    <div class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-white/10">
+                        <div>
+                            <h3 class="font-semibold">Glucia</h3>
+                            <p class="text-sm text-slate-400">Next-gen utility platform.</p>
+                        </div>
+                        <span class="text-pink-400">→</span>
+                    </div>
+                    <div class="flex items-center justify-between p-4 rounded-xl hover:bg-white/5 transition-colors cursor-pointer border border-transparent hover:border-white/10">
+                        <div>
+                            <h3 class="font-semibold">Al-Murshid</h3>
+                            <p class="text-sm text-slate-400">Localized guidance application.</p>
+                        </div>
+                        <span class="text-pink-400">→</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="mt-12 pt-8 border-t border-white/5 text-center">
+            <p class="text-slate-500 text-sm">© 2026 Dev Pro Mobile Solutions</p>
+            <div class="mt-4 flex justify-center gap-6 text-slate-400">
+                <a href="/app-ads.txt" class="hover:text-pink-400 transition-colors">app-ads.txt</a>
+                <a href="#" class="hover:text-pink-400 transition-colors">GitHub</a>
+                <a href="mailto:hello@example.com" class="hover:text-pink-400 transition-colors">Contact</a>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
