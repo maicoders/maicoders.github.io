@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Privacy Policy — Super Sonic Jet 3D : Space Fighter</title>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #03060f;
+    --surface: #070d1a;
+    --cyan: #00d4ff;
+    --cyan-dim: rgba(0, 212, 255, 0.12);
+    --cyan-border: rgba(0, 212, 255, 0.25);
+    --text: #b8cfe0;
+    --text-dim: rgba(184, 207, 224, 0.45);
+    --heading: #e8f4ff;
+    --accent: #ff6b35;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 14px;
+    line-height: 1.9;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* Starfield */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      radial-gradient(1px 1px at 15% 20%, rgba(255,255,255,0.6) 0%, transparent 100%),
+      radial-gradient(1px 1px at 42% 8%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 68% 35%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 83% 12%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 25% 60%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 55% 75%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 90% 55%, rgba(255,255,255,0.5) 0%, transparent 100%),
+      radial-gradient(1px 1px at 10% 85%, rgba(255,255,255,0.3) 0%, transparent 100%),
+      radial-gradient(1px 1px at 72% 90%, rgba(255,255,255,0.4) 0%, transparent 100%),
+      radial-gradient(1px 1px at 35% 45%, rgba(0,212,255,0.4) 0%, transparent 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Scan lines */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 212, 255, 0.015) 2px,
+      rgba(0, 212, 255, 0.015) 4px
+    );
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .wrapper {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 60px 24px 80px;
+  }
+
+  /* Header */
+  header {
+    text-align: center;
+    margin-bottom: 56px;
+    animation: fadeDown 0.8s ease both;
+  }
+
+  .game-badge {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    color: var(--cyan);
+    border: 1px solid var(--cyan-border);
+    padding: 6px 18px;
+    border-radius: 2px;
+    margin-bottom: 20px;
+    background: var(--cyan-dim);
+  }
+
+  h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: clamp(22px, 5vw, 38px);
+    font-weight: 900;
+    color: var(--heading);
+    letter-spacing: 2px;
+    line-height: 1.2;
+    margin-bottom: 14px;
+    text-shadow: 0 0 40px rgba(0, 212, 255, 0.3);
+  }
+
+  .subtitle {
+    color: var(--text-dim);
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .divider {
+    width: 120px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--cyan), transparent);
+    margin: 24px auto 0;
+  }
+
+  /* Sections */
+  .section {
+    background: var(--surface);
+    border: 1px solid var(--cyan-border);
+    border-left: 3px solid var(--cyan);
+    border-radius: 4px;
+    padding: 28px 32px;
+    margin-bottom: 20px;
+    position: relative;
+    animation: fadeUp 0.6s ease both;
+  }
+
+  .section:nth-child(2) { animation-delay: 0.1s; }
+  .section:nth-child(3) { animation-delay: 0.15s; }
+  .section:nth-child(4) { animation-delay: 0.2s; }
+  .section:nth-child(5) { animation-delay: 0.25s; }
+  .section:nth-child(6) { animation-delay: 0.3s; }
+  .section:nth-child(7) { animation-delay: 0.35s; }
+
+  .section::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    opacity: 0.4;
+  }
+
+  .section-tag {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: var(--cyan);
+    margin-bottom: 10px;
+    opacity: 0.7;
+  }
+
+  h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--heading);
+    letter-spacing: 1px;
+    margin-bottom: 14px;
+  }
+
+  p {
+    color: var(--text);
+    margin-bottom: 10px;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  a {
+    color: var(--cyan);
+    text-decoration: none;
+    border-bottom: 1px solid var(--cyan-border);
+    transition: border-color 0.2s, color 0.2s;
+  }
+
+  a:hover {
+    color: #fff;
+    border-color: var(--cyan);
+  }
+
+  /* Contact highlight */
+  .contact-box {
+    border-left-color: var(--accent);
+  }
+
+  .contact-box .section-tag {
+    color: var(--accent);
+  }
+
+  .contact-box::before {
+    background: linear-gradient(90deg, var(--accent), transparent);
+  }
+
+  .email {
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 13px;
+    color: var(--accent);
+    border: 1px solid rgba(255, 107, 53, 0.3);
+    padding: 8px 16px;
+    border-radius: 2px;
+    margin-top: 8px;
+    background: rgba(255, 107, 53, 0.08);
+  }
+
+  /* Footer */
+  footer {
+    text-align: center;
+    margin-top: 48px;
+    color: var(--text-dim);
+    font-size: 11px;
+    letter-spacing: 1px;
+    animation: fadeUp 0.6s 0.4s ease both;
+  }
+
+  footer .studio {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--cyan);
+    font-size: 10px;
+    letter-spacing: 3px;
+    margin-bottom: 6px;
+  }
+
+  @keyframes fadeDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  @media (max-width: 500px) {
+    .section { padding: 20px 18px; }
+    .wrapper { padding: 40px 16px 60px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrapper">
+
+  <header>
+    <div class="game-badge">SUPER SONIC JET — MOBILE GAME</div>
+    <h1>PRIVACY POLICY</h1>
+    <p class="subtitle">SPACE FIGHTER</p>
+    <div class="divider"></div>
+  </header>
+
+  <div class="section">
+    <div class="section-tag">// OVERVIEW</div>
+    <h2>Introduction</h2>
+    <p>Super Sonic Jet is a free-to-play mobile game. This privacy policy explains how data is handled when you play our game.</p>
+    <p>Last updated: <strong style="color:#e8f4ff">May 31, 2026</strong></p>
+  </div>
+
+  <div class="section">
+    <div class="section-tag">// ADVERTISING</div>
+    <h2>Google AdMob</h2>
+    <p>This app uses Google AdMob to display advertisements. AdMob may collect and use data from your device — including device identifiers and IP address — to serve personalized or non-personalized ads based on your consent choice.</p>
+    <p>To learn how Google collects and uses data, visit:<br>
+    <a href="https://policies.google.com/privacy" target="_blank">https://policies.google.com/privacy</a></p>
+  </div>
+
+  <div class="section">
+    <div class="section-tag">// DATA COLLECTION</div>
+    <h2>What We Collect</h2>
+    <p>the game does not directly collect any personal data. All data collection is performed solely by Google AdMob on our behalf.</p>
+    <p>We do not store, share, or sell any personal information.</p>
+  </div>
+
+
+  <div class="section">
+    <div class="section-tag">// UPDATES</div>
+    <h2>Changes to This Policy</h2>
+    <p>We may update this privacy policy from time to time. Any changes will be reflected on this page with an updated date. Continued use of the app after changes constitutes your acceptance of the updated policy.</p>
+  </div>
+
+
+
+  <footer>
+    <div class="studio">MAI Coder's</div>
+    <p>© 2026 MAI Coder's · All rights reserved</p>
+  </footer>
+
+</div>
+</body>
+</html>
