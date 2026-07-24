@@ -233,7 +233,7 @@
     <p>✅ &nbsp;All your health data is stored exclusively on your device — never uploaded to any server.</p>
     <p>✅ &nbsp;We do not sell, share, or monetise your personal health data.</p>
     <p>✅ &nbsp;Advertising (Google AdMob) is optional and governed by your consent.</p>
-    <p>✅ &nbsp;Step data is read only with your permission via Android Health Connect and never leaves your device.</p>
+    <p>✅ &nbsp;Step data is read only with your permission — via your device's built-in step sensor and/or Android Health Connect — and never leaves your device.</p>
     <p>✅ &nbsp;You can delete all your data at any time from Settings → Danger Zone.</p>
     <p>✅ &nbsp;This app is not intended for children under the age of 13.</p>
     <p>⚖️ &nbsp;This policy complies with GDPR, CCPA, and applicable app store policies.</p>
@@ -298,15 +298,28 @@
     <p>When you use the barcode scanner, Glucia queries the Open Food Facts public API to retrieve nutritional information. Your device's IP address is sent as part of a standard HTTP request. No personal data from your profile is transmitted.</p>
     <p>Open Food Facts privacy policy: <a href="https://world.openfoodfacts.org/privacy">world.openfoodfacts.org/privacy</a></p>
 
-    <h2>3.3 Health Connect (Android System Integration)</h2>
-    <p>Glucia can optionally read step count data from <strong>Android Health Connect</strong>, a system-level service that lets you control which apps can access fitness and health data stored on your device.</p>
+    <h2>3.3 Step Data Sources: Device Sensor &amp; Health Connect</h2>
+    <p>Glucia can automatically count your steps using one or both of the following sources, depending on your device and the permissions you grant:</p>
+
+    <h3>Built-in Step Sensor (Pedometer)</h3>
+    <p>Most Android devices have a hardware step-counter sensor. With your permission (the <strong>Physical Activity</strong> permission), Glucia reads step counts directly from this sensor to update your daily step count in real time.</p>
+    <ul>
+      <li>This data comes directly from your device's motion hardware — no separate app or account is involved.</li>
+      <li>Step counts are used solely to display your daily steps, distance, and calorie estimates inside the app.</li>
+      <li>This data is <strong>never transmitted off your device</strong>.</li>
+      <li>You can revoke this permission at any time via <strong>Android Settings → Apps → Glucia → Permissions → Physical activity</strong>.</li>
+    </ul>
+
+    <h3>Android Health Connect</h3>
+    <p>Glucia can also optionally read step count data from <strong>Android Health Connect</strong>, a system-level service that lets you control which apps can access fitness and health data stored on your device — useful if your steps are recorded by another app or wearable.</p>
     <ul>
       <li>Glucia requests read-only access to step count data.</li>
       <li>This data is used solely to display your daily steps, distance, and calorie estimates inside the app.</li>
       <li>Step data read from Health Connect is <strong>never transmitted off your device</strong> — it is used only to populate your local Activity tracker.</li>
       <li>You can review, grant, or revoke this permission at any time via <strong>Android Settings → Apps → Health Connect → App permissions</strong>, or from Glucia's own permission prompt.</li>
-      <li>If permission is not granted, you can still log steps manually within the app.</li>
     </ul>
+
+    <p>If neither source is available or permission is not granted, you can still log steps manually within the app.</p>
   </div>
 
   <!-- 4. HOW WE USE DATA -->
@@ -317,7 +330,7 @@
       <li><strong>Glucose Tracking:</strong> Display readings, calculate averages, estimate A1C, generate time-in-range statistics.</li>
       <li><strong>Medication Reminders:</strong> Schedule and deliver local push notifications at times you set. Track taken/skipped status.</li>
       <li><strong>Nutrition Logging:</strong> Record meals, calculate daily macro totals, show carb progress.</li>
-      <li><strong>Activity Tracking:</strong> Record step counts (manual entry or via Health Connect), calculate distance and calories, and track progress toward your daily step goal.</li>
+      <li><strong>Activity Tracking:</strong> Record step counts (manual entry, your device's built-in step sensor, or Health Connect), calculate distance and calories, and track progress toward your daily step goal.</li>
       <li><strong>Hydration Tracking:</strong> Log water intake and track daily hydration progress against your goal.</li>
       <li><strong>Health Reports:</strong> Generate PDF reports from your local data. Reports are only shared when you explicitly tap the share button.</li>
       <li><strong>Profile Personalisation:</strong> Show your name in reports, calculate BMI, apply your glucose target range to charts.</li>
@@ -332,6 +345,7 @@
     <table>
       <tr><th>Processing Activity</th><th>Legal Basis</th><th>GDPR Article</th></tr>
       <tr><td>Storing health data locally</td><td>Performance of contract / your explicit request</td><td>Art. 6(1)(b), Art. 9(2)(a)</td></tr>
+      <tr><td>Reading steps via device sensor (Physical Activity permission)</td><td>Your explicit permission grant</td><td>Art. 6(1)(a), Art. 9(2)(a)</td></tr>
       <tr><td>Reading step data via Health Connect</td><td>Your explicit permission grant</td><td>Art. 6(1)(a), Art. 9(2)(a)</td></tr>
       <tr><td>Personalised advertisements</td><td>Consent</td><td>Art. 6(1)(a)</td></tr>
       <tr><td>Non-personalised advertisements</td><td>Legitimate interests</td><td>Art. 6(1)(f)</td></tr>
@@ -389,6 +403,7 @@
       <tr><td>Rectification</td><td>Edit or correct any entry directly within the app.</td></tr>
       <tr><td>Erasure</td><td>Settings → Danger Zone → Delete All My Data.</td></tr>
       <tr><td>Data Portability</td><td>Use the PDF Export feature (Report screen).</td></tr>
+      <tr><td>Revoke Step Sensor Access</td><td>Android Settings → Apps → Glucia → Permissions → Physical activity.</td></tr>
       <tr><td>Revoke Health Connect Access</td><td>Android Settings → Apps → Health Connect → App permissions.</td></tr>
       <tr><td>Withdraw Ad Consent</td><td>Settings → Privacy → Manage Ad Preferences.</td></tr>
       <tr><td>Lodge a Complaint</td><td>Contact your local Data Protection Authority.</td></tr>
@@ -476,7 +491,7 @@ enabling dark mode. All ads are optional — if an ad
       <li>For significant changes, we may notify you via an in-app notice on next launch</li>
     </ul>
     <p>Continued use of Glucia after changes take effect constitutes acceptance of the updated policy.</p>
-    <p style="font-size: 13px; color: #999;"><em>Version 1.1 (July 24, 2026): Added disclosures for Activity/Steps tracking, Water intake tracking, and Android Health Connect integration.</em></p>
+    <p style="font-size: 13px; color: #999;"><em>Version 1.1 (July 24, 2026): Added disclosures for Activity/Steps tracking, Water intake tracking, the device's built-in step sensor (pedometer), and Android Health Connect integration.</em></p>
   </div>
 
   <!-- FOOTER -->
