@@ -21,7 +21,6 @@
       background: #ffffff;
     }
 
-    /* ── Header ── */
     .header {
       text-align: center;
       padding-bottom: 40px;
@@ -55,7 +54,6 @@
       color: #aaa;
     }
 
-    /* ── Key facts box ── */
     .key-facts {
       background: #FFF5F8;
       border-left: 4px solid #FF7DA0;
@@ -80,7 +78,6 @@
       line-height: 1.6;
     }
 
-    /* ── Sections ── */
     .section {
       margin-bottom: 48px;
     }
@@ -129,7 +126,6 @@
       line-height: 1.7;
     }
 
-    /* ── Tables ── */
     table {
       width: 100%;
       border-collapse: collapse;
@@ -162,7 +158,6 @@
       white-space: nowrap;
     }
 
-    /* ── Disclaimer box ── */
     .disclaimer {
       background: #fff8f0;
       border: 1px solid #ffd0a0;
@@ -183,7 +178,6 @@
       margin-bottom: 8px;
     }
 
-    /* ── Footer ── */
     .footer {
       margin-top: 64px;
       padding-top: 24px;
@@ -224,7 +218,7 @@
     <div class="app-name">Glucia</div>
     <div class="app-tagline">Diabetes &amp; Glucose Tracker</div>
     <div class="policy-title">Privacy Policy</div>
-    <div class="effective-date">Effective Date: July 24, 2026 &nbsp;·&nbsp; Version 1.1</div>
+    <div class="effective-date">Effective Date: July 24, 2026 &nbsp;·&nbsp; Version 1.2</div>
   </div>
 
   <!-- KEY FACTS -->
@@ -236,7 +230,6 @@
     <p>✅ &nbsp;Step data is read only with your permission — via your device's built-in step sensor and/or Android Health Connect — and never leaves your device.</p>
     <p>✅ &nbsp;You can delete all your data at any time from Settings → Danger Zone.</p>
     <p>✅ &nbsp;This app is not intended for children under the age of 13.</p>
-    <p>⚖️ &nbsp;This policy complies with GDPR, CCPA, and applicable app store policies.</p>
   </div>
 
   <!-- 1. WHO WE ARE -->
@@ -287,8 +280,7 @@
       <li>Device information (model, OS version, screen size)</li>
       <li>Ad interaction data (impressions, clicks)</li>
     </ul>
-    <p><strong>Legal basis (GDPR):</strong> Consent (Article 6(1)(a)). EU/UK users are presented with a consent form before any advertising data is collected. You may withdraw consent at any time in <strong>Settings → Privacy → Manage Ad Preferences</strong>.</p>
-    <p>Users who decline personalised advertising will see non-personalised ads instead.</p>
+    <p>We only collect this advertising data if you consent to it. If you're in the EEA, UK, or Switzerland, you'll see a consent screen the first time you open the app. You can change your choice anytime in <strong>Settings → Privacy → Manage Ad Preferences</strong>. If you decline personalised advertising, you'll still see ads, just not tailored to you.</p>
     <p>Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
 
     <h3>Google Fonts</h3>
@@ -338,26 +330,9 @@
     </ul>
   </div>
 
-  <!-- 5. LEGAL BASES -->
+  <!-- 5. DATA SHARING -->
   <div class="section">
-    <h1>5. Legal Bases for Processing (GDPR)</h1>
-    <p>This section applies to users in the EEA, United Kingdom, and Switzerland.</p>
-    <table>
-      <tr><th>Processing Activity</th><th>Legal Basis</th><th>GDPR Article</th></tr>
-      <tr><td>Storing health data locally</td><td>Performance of contract / your explicit request</td><td>Art. 6(1)(b), Art. 9(2)(a)</td></tr>
-      <tr><td>Reading steps via device sensor (Physical Activity permission)</td><td>Your explicit permission grant</td><td>Art. 6(1)(a), Art. 9(2)(a)</td></tr>
-      <tr><td>Reading step data via Health Connect</td><td>Your explicit permission grant</td><td>Art. 6(1)(a), Art. 9(2)(a)</td></tr>
-      <tr><td>Personalised advertisements</td><td>Consent</td><td>Art. 6(1)(a)</td></tr>
-      <tr><td>Non-personalised advertisements</td><td>Legitimate interests</td><td>Art. 6(1)(f)</td></tr>
-      <tr><td>Support or privacy enquiries</td><td>Legitimate interests</td><td>Art. 6(1)(f)</td></tr>
-      <tr><td>Barcode API call</td><td>Performance of contract</td><td>Art. 6(1)(b)</td></tr>
-    </table>
-    <p><strong>Special Category Data:</strong> Glucose readings, diabetes type, and medication information constitute "special category data" under Article 9 GDPR. You provide this data voluntarily for personal health tracking, based on your explicit consent (Article 9(2)(a)).</p>
-  </div>
-
-  <!-- 6. DATA SHARING -->
-  <div class="section">
-    <h1>6. Data Sharing and Disclosure</h1>
+    <h1>5. Data Sharing and Disclosure</h1>
     <p>We do not sell, rent, or trade your personal data. We do not have access to your health data. Your health information never leaves your device except in the following cases:</p>
 
     <h3>When You Choose to Share</h3>
@@ -373,9 +348,9 @@
     <p>We may disclose information if required by law. Given that all health data is on your device, we typically would not have access to provide such information even if required.</p>
   </div>
 
-  <!-- 7. STORAGE & SECURITY -->
+  <!-- 6. STORAGE & SECURITY -->
   <div class="section">
-    <h1>7. Data Storage, Retention, and Security</h1>
+    <h1>6. Data Storage, Retention, and Security</h1>
 
     <h3>Storage Location</h3>
     <p>All health data is stored in a local SQLite database on your Android device, in the app's private data directory — not accessible to other apps.</p>
@@ -393,9 +368,9 @@
     <p><em>You are responsible for the physical security of your device, including lock screen protection.</em></p>
   </div>
 
-  <!-- 8. YOUR RIGHTS -->
+  <!-- 7. YOUR RIGHTS -->
   <div class="section">
-    <h1>8. Your Rights</h1>
+    <h1>7. Your Rights</h1>
     <p>Because all data is stored locally, most rights are exercised directly within the app:</p>
     <table>
       <tr><th>Right</th><th>How to Exercise It</th></tr>
@@ -406,7 +381,6 @@
       <tr><td>Revoke Step Sensor Access</td><td>Android Settings → Apps → Glucia → Permissions → Physical activity.</td></tr>
       <tr><td>Revoke Health Connect Access</td><td>Android Settings → Apps → Health Connect → App permissions.</td></tr>
       <tr><td>Withdraw Ad Consent</td><td>Settings → Privacy → Manage Ad Preferences.</td></tr>
-      <tr><td>Lodge a Complaint</td><td>Contact your local Data Protection Authority.</td></tr>
     </table>
 
     <h2 id="data-deletion">How to Delete Your Data</h2>
@@ -423,9 +397,9 @@
     <p>For any data-related requests, use the feedback button inside the app: Settings → Send Feedback</p>
   </div>
 
-  <!-- 9. ADVERTISING -->
+  <!-- 8. ADVERTISING -->
   <div class="section">
-    <h1>9. Advertising and Consent</h1>
+    <h1>8. Advertising and Consent</h1>
 
     <h3>Google UMP Consent Flow</h3>
     <p>Users in the EEA, UK, or Switzerland will see a consent form powered by Google's User Messaging Platform (UMP) before any advertising data is collected. This form appears on first launch and can be accessed again at any time via <strong>Settings → Privacy → Manage Ad Preferences</strong>.</p>
@@ -437,16 +411,16 @@ enabling dark mode. All ads are optional — if an ad
   fails to load, the feature unlocks automatically.</p>
   </div>
 
-  <!-- 10. CHILDREN -->
+  <!-- 9. CHILDREN -->
   <div class="section">
-    <h1>10. Children's Privacy</h1>
+    <h1>9. Children's Privacy</h1>
     <p>Glucia is not directed at children under the age of 13. We do not knowingly collect personal data from children under 13. The app is rated for ages 18 and above on the Google Play Store.</p>
     <p>If you believe a child has entered data into Glucia, you may delete it using <strong>Settings → Danger Zone → Delete All My Data</strong>, or by uninstalling the app.</p>
   </div>
 
-  <!-- 11. MEDICAL DISCLAIMER -->
+  <!-- 10. MEDICAL DISCLAIMER -->
   <div class="section">
-    <h1>11. Medical Disclaimer</h1>
+    <h1>10. Medical Disclaimer</h1>
     <div class="disclaimer">
       <h3>⚠️ Important Medical Disclaimer</h3>
       <p>Glucia is a personal health tracking tool and is <strong>NOT a medical device</strong>.</p>
@@ -457,9 +431,9 @@ enabling dark mode. All ads are optional — if an ad
     </div>
   </div>
 
-  <!-- 12. ATTRIBUTIONS -->
+  <!-- 11. ATTRIBUTIONS -->
   <div class="section">
-    <h1>12. Third-Party Services and Attributions</h1>
+    <h1>11. Third-Party Services and Attributions</h1>
     <table>
       <tr><th>Service / Library</th><th>Purpose</th><th>License</th></tr>
       <tr><td>Open Food Facts</td><td>Nutritional data for barcode-scanned foods</td><td>ODbL 1.0</td></tr>
@@ -471,27 +445,27 @@ enabling dark mode. All ads are optional — if an ad
     </table>
   </div>
 
-  <!-- 13. INTERNATIONAL TRANSFERS -->
+  <!-- 12. INTERNATIONAL TRANSFERS -->
   <div class="section">
-    <h1>13. International Data Transfers</h1>
-    <p>Because Glucia stores health data locally on your device, no international transfers of your health data occur. Step data read via Android Health Connect also stays entirely on-device and is not transferred internationally. The only international data flows are:</p>
+    <h1>12. International Data Transfers</h1>
+    <p>Because Glucia stores health data locally on your device, no international transfers of your health data occur. Step data read via Android Health Connect also stays entirely on-device. The only international data flows are:</p>
     <ul>
-      <li>AdMob advertising data processed by Google (US company), subject to EU Standard Contractual Clauses</li>
-      <li>Open Food Facts API requests sent to Open Food Facts servers (French non-profit) when using the barcode scanner</li>
-      <li>Google Fonts requests sent to Google's CDN on first font load</li>
+      <li>Advertising data processed by Google (AdMob), a US company</li>
+      <li>Barcode lookups sent to Open Food Facts (a French non-profit) when using the scanner</li>
+      <li>Font files loaded from Google's CDN on first use</li>
     </ul>
   </div>
 
-  <!-- 14. CHANGES -->
+  <!-- 13. CHANGES -->
   <div class="section">
-    <h1>14. Changes to This Policy</h1>
+    <h1>13. Changes to This Policy</h1>
     <p>We may update this Privacy Policy from time to time. When we make material changes:</p>
     <ul>
       <li>We will update the "Effective Date" at the top of this document</li>
       <li>For significant changes, we may notify you via an in-app notice on next launch</li>
     </ul>
     <p>Continued use of Glucia after changes take effect constitutes acceptance of the updated policy.</p>
-    <p style="font-size: 13px; color: #999;"><em>Version 1.1 (July 24, 2026): Added disclosures for Activity/Steps tracking, Water intake tracking, the device's built-in step sensor (pedometer), and Android Health Connect integration.</em></p>
+    <p style="font-size: 13px; color: #999;"><em>Version 1.2 (July 24, 2026): Simplified the policy's language throughout and removed the detailed legal-basis table in favor of plain-English explanations.</em></p>
   </div>
 
   <!-- FOOTER -->
