@@ -1,478 +1,294 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"></meta>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"></meta>
-  <title>Glucia — Privacy Policy</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy – Glucia</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --sage:     #4a7c59;
+      --sage-light: #d4e8da;
+      --leaf:     #2e5c3e;
+      --cream:    #f7f5f0;
+      --bark:     #3b2f2a;
+      --mist:     #e8f0eb;
+      --text:     #2c2824;
+      --sub:      #6b6460;
+    }
 
     body {
-      font-family: 'Georgia', serif;
+      background: var(--cream);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
       font-size: 16px;
-      line-height: 1.8;
-      color: #2d2d2d;
-      background: #fafafa;
-    }
-
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 48px 32px 80px;
-      background: #ffffff;
-    }
-
-    .header {
-      text-align: center;
-      padding-bottom: 40px;
-      border-bottom: 3px solid #FF7DA0;
-      margin-bottom: 48px;
-    }
-
-    .app-name {
-      font-size: 42px;
-      font-weight: 700;
-      color: #C0394B;
-      letter-spacing: -1px;
-      margin-bottom: 6px;
-    }
-
-    .app-tagline {
-      font-size: 16px;
-      color: #999;
-      margin-bottom: 20px;
-    }
-
-    .policy-title {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-bottom: 8px;
-    }
-
-    .effective-date {
-      font-size: 14px;
-      color: #aaa;
-    }
-
-    .key-facts {
-      background: #FFF5F8;
-      border-left: 4px solid #FF7DA0;
-      border-radius: 8px;
-      padding: 24px 28px;
-      margin-bottom: 48px;
-    }
-
-    .key-facts h3 {
-      font-size: 14px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      color: #C0394B;
-      margin-bottom: 14px;
-    }
-
-    .key-facts p {
-      font-size: 15px;
-      color: #444;
-      margin-bottom: 6px;
-      line-height: 1.6;
-    }
-
-    .section {
-      margin-bottom: 48px;
-    }
-
-    h1 {
-      font-size: 22px;
-      font-weight: 700;
-      color: #C0394B;
-      border-bottom: 1px solid #f0d8df;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 17px;
-      font-weight: 700;
-      color: #E8728A;
-      margin-top: 28px;
-      margin-bottom: 12px;
-      padding-left: 14px;
-      border-left: 3px solid #E8728A;
-    }
-
-    h3 {
-      font-size: 15px;
-      font-weight: 700;
-      color: #1a1a2e;
-      margin-top: 20px;
-      margin-bottom: 8px;
-    }
-
-    p {
-      margin-bottom: 14px;
-      color: #333;
-      font-size: 15px;
-    }
-
-    ul {
-      margin: 10px 0 16px 24px;
-    }
-
-    ul li {
-      font-size: 15px;
-      color: #333;
-      margin-bottom: 6px;
       line-height: 1.7;
     }
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 16px 0 24px;
-      font-size: 14px;
-    }
-
-    th {
-      background: #C0394B;
-      color: white;
-      padding: 10px 14px;
-      text-align: left;
-      font-weight: 700;
-    }
-
-    td {
-      padding: 10px 14px;
-      border-bottom: 1px solid #f0e8e8;
-      vertical-align: top;
-      line-height: 1.6;
-    }
-
-    tr:nth-child(even) td {
-      background: #fffafa;
-    }
-
-    td:first-child {
-      font-weight: 600;
-      color: #1a1a2e;
-      white-space: nowrap;
-    }
-
-    .disclaimer {
-      background: #fff8f0;
-      border: 1px solid #ffd0a0;
-      border-radius: 8px;
-      padding: 20px 24px;
-      margin: 20px 0;
-    }
-
-    .disclaimer h3 {
-      color: #c07000;
-      margin-top: 0;
-      margin-bottom: 10px;
-    }
-
-    .disclaimer p {
-      color: #6b4700;
-      font-size: 14px;
-      margin-bottom: 8px;
-    }
-
-    .footer {
-      margin-top: 64px;
-      padding-top: 24px;
-      border-top: 2px solid #FF7DA0;
+    /* ── Header ── */
+    header {
+      background: var(--leaf);
+      padding: 48px 24px 40px;
       text-align: center;
     }
 
-    .footer p {
-      font-size: 13px;
-      color: #aaa;
+    .logo-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .logo-leaf {
+      width: 36px;
+      height: 36px;
+    }
+
+    .app-name {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.6rem;
+      color: #fff;
+      letter-spacing: -0.01em;
+    }
+
+    header h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 12px;
+    }
+
+    header p {
+      color: var(--sage-light);
+      font-size: 1rem;
+      max-width: 480px;
+      margin: 0 auto;
+    }
+
+    /* ── Main ── */
+    main {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    .updated {
+      font-size: 0.82rem;
+      color: var(--sub);
+      margin-bottom: 40px;
+    }
+
+    /* ── Intro card ── */
+    .intro-card {
+      background: var(--mist);
+      border-left: 4px solid var(--sage);
+      border-radius: 0 12px 12px 0;
+      padding: 20px 24px;
+      margin-bottom: 48px;
+      font-size: 1rem;
+      color: var(--leaf);
+      font-weight: 500;
+    }
+
+    /* ── Sections ── */
+    section {
+      margin-bottom: 40px;
+    }
+
+    section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.3rem;
+      color: var(--leaf);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    section h2 .icon {
+      width: 28px;
+      height: 28px;
+      background: var(--sage-light);
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+
+    section p {
+      color: var(--text);
+      margin-bottom: 8px;
+    }
+
+    section ul {
+      padding-left: 20px;
+      margin-top: 6px;
+    }
+
+    section ul li {
       margin-bottom: 4px;
+      color: var(--text);
     }
 
-    a {
-      color: #C0394B;
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--sage-light);
+      margin: 40px 0;
+    }
+
+    /* ── Contact ── */
+    .contact-box {
+      background: var(--leaf);
+      border-radius: 16px;
+      padding: 28px 28px;
+      text-align: center;
+    }
+
+    .contact-box p {
+      color: var(--sage-light);
+      margin-bottom: 12px;
+    }
+
+    .contact-box a {
+      color: #fff;
+      font-weight: 600;
       text-decoration: none;
+      border-bottom: 1px solid var(--sage-light);
+      padding-bottom: 1px;
     }
 
-    a:hover {
-      text-decoration: underline;
+    /* ── Footer ── */
+    footer {
+      text-align: center;
+      padding: 24px;
+      font-size: 0.8rem;
+      color: var(--sub);
     }
 
-    strong { color: #1a1a2e; }
-
-    @media (max-width: 600px) {
-      .container { padding: 24px 18px 60px; }
-      .app-name { font-size: 32px; }
-      table { font-size: 13px; }
-      td:first-child { white-space: normal; }
+    @media (max-width: 480px) {
+      header { padding: 36px 20px 32px; }
+      main { padding: 36px 20px 60px; }
     }
   </style>
 </head>
 <body>
-<div class="container">
 
-  <!-- HEADER -->
-  <div class="header">
-    <div class="app-name">Glucia</div>
-    <div class="app-tagline">Diabetes &amp; Glucose Tracker</div>
-    <div class="policy-title">Privacy Policy</div>
-    <div class="effective-date">Effective Date: July 24, 2026 &nbsp;·&nbsp; Version 1.2</div>
+<header>
+  <div class="logo-lockup">
+    <svg class="logo-leaf" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="18" cy="18" r="18" fill="rgba(255,255,255,0.12)"/>
+      <path d="M18 28 C18 28 10 22 10 15 C10 10.6 13.6 7 18 7 C22.4 7 26 10.6 26 15 C26 22 18 28 18 28Z" fill="#8fce9e"/>
+      <line x1="18" y1="28" x2="18" y2="17" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+    </svg>
+    <span class="app-name">Glucia</span>
+  </div>
+  <h1>Privacy Policy</h1>
+  <p>Plain language, no surprises. Here's exactly how Glucia handles your information.</p>
+</header>
+
+<main>
+
+  <p class="updated">Last updated: August 2025</p>
+
+  <div class="intro-card">
+    🌿 The short version: Glucia stores everything on your device. We don't collect your data, we don't have servers for your personal information, and we don't require an account.
   </div>
 
-  <!-- KEY FACTS -->
-  <div class="key-facts">
-    <h3>Key Facts at a Glance</h3>
-    <p>✅ &nbsp;All your health data is stored exclusively on your device — never uploaded to any server.</p>
-    <p>✅ &nbsp;We do not sell, share, or monetise your personal health data.</p>
-    <p>✅ &nbsp;Advertising (Google AdMob) is optional and governed by your consent.</p>
-    <p>✅ &nbsp;Step data is read only with your permission — via your device's built-in step sensor and/or Android Health Connect — and never leaves your device.</p>
-    <p>✅ &nbsp;You can delete all your data at any time from Settings → Danger Zone.</p>
-    <p>✅ &nbsp;This app is not intended for children under the age of 13.</p>
-  </div>
+  <!-- 1 -->
+  <section>
+    <h2><span class="icon">📱</span> Your data stays on your device</h2>
+    <p>Everything you add to Glucia — your plants, photos, care logs, reminders, and journal entries — is saved locally on your phone.</p>
+    <p>We do not upload, sync, or store any of this on external servers. Your plant collection belongs to you, and only you.</p>
+  </section>
 
-  <!-- 1. WHO WE ARE -->
-  <div class="section">
-    <h1>1. Who We Are</h1>
-    <p>Glucia is a mobile application that provides diabetes management tools including glucose tracking, medication reminders, nutrition logging, activity and hydration tracking, and health reporting.</p>
-    <table>
-      <tr><th>Detail</th><th>Information</th></tr>
-      <tr><td>App Name</td><td>Glucia — Diabetes Tracker</td></tr>
-      <tr><td>Platform</td><td>Android (Google Play Store)</td></tr>
-      <tr><td>Languages</td><td>English, French, Arabic</td></tr>
-    </table>
-  </div>
+  <hr/>
 
-  <!-- 2. SCOPE -->
-  <div class="section">
-    <h1>2. Scope of This Policy</h1>
-    <p>This Privacy Policy applies to the Glucia mobile application and all its features including glucose logging, food tracking, medication reminders, activity and step tracking, water tracking, and PDF report export.</p>
-    <p>It does <strong>not</strong> apply to third-party websites linked from the app (such as Open Food Facts) or the Google Play Store itself.</p>
-  </div>
+  <!-- 2 -->
+  <section>
+    <h2><span class="icon">🔒</span> No account needed</h2>
+    <p>You never need to create an account, sign in, or provide any personal details to use Glucia. There are no usernames, passwords, or email addresses involved.</p>
+  </section>
 
-  <!-- 3. DATA WE COLLECT -->
-  <div class="section">
-    <h1>3. Data We Collect</h1>
-    <p>Glucia is built on a <strong>local-first architecture</strong>. The vast majority of data never leaves your device.</p>
+  <hr/>
 
-    <h2>3.1 Data You Enter — Stored Locally Only</h2>
-    <p>The following data is stored exclusively in a local database on your device. It is never transmitted to Glucia or any third party:</p>
-    <table>
-      <tr><th>Category</th><th>Examples</th><th>Stored Where</th></tr>
-      <tr><td>Glucose Readings</td><td>Value, timestamp, timing, mood, notes</td><td>On device only</td></tr>
-      <tr><td>Profile</td><td>Name, date of birth, gender, weight, height, diabetes type</td><td>On device only</td></tr>
-      <tr><td>Medications</td><td>Name, dose, schedule, duration, taken/skipped status</td><td>On device only</td></tr>
-      <tr><td>Food &amp; Nutrition</td><td>Food names, carbs, protein, fat, calories, timestamps</td><td>On device only</td></tr>
-      <tr><td>Activity &amp; Steps</td><td>Step count, distance, calories burned, timestamps</td><td>On device only</td></tr>
-      <tr><td>Water Intake</td><td>Amount (ml), timestamp, daily hydration goal</td><td>On device only</td></tr>
-      <tr><td>App Preferences</td><td>Language, theme, dark mode, notification settings</td><td>On device only</td></tr>
-      <tr><td>Glucose Targets</td><td>Personal min/max target range (mg/dL)</td><td>On device only</td></tr>
-    </table>
+  <!-- 3 -->
+  <section>
+    <h2><span class="icon">📡</span> No internet required</h2>
+    <p>Glucia works fully offline. The plant library, reminders, calendar, and all tracking features work without a network connection.</p>
+  </section>
 
-    <h2>3.2 Data Collected by Third-Party SDKs</h2>
+  <hr/>
 
-    <h3>Google AdMob (Advertising)</h3>
-    <p>Google AdMob displays advertisements to free users. AdMob may collect:</p>
+  <!-- 4 -->
+  <section>
+    <h2><span class="icon">📸</span> Photos</h2>
+    <p>When you add a photo to a plant, it is saved directly on your device as part of the app's local storage. Photos are never sent anywhere.</p>
+    <p>Glucia only accesses your camera or photo library when you specifically choose to add a photo. We do not access your gallery at any other time.</p>
+  </section>
+
+  <hr/>
+
+  <!-- 5 -->
+  <section>
+    <h2><span class="icon">🔔</span> Notifications</h2>
+    <p>Glucia can send you local reminders for watering, fertilizing, misting, and repotting. These notifications are scheduled entirely on your device — no data is sent to us to make them work.</p>
+    <p>You can turn notifications on or off at any time in your phone's settings.</p>
+  </section>
+
+  <hr/>
+
+  <!-- 6 -->
+  <section>
+    <h2><span class="icon">📊</span> Ads</h2>
+    <p>Glucia is free and supported by ads provided by Google AdMob. AdMob may collect some general information to show relevant ads, such as your approximate location or device type. This is handled entirely by Google and follows <a href="https://policies.google.com/privacy" target="_blank" style="color: var(--sage); font-weight:500;">Google's Privacy Policy</a>.</p>
+    <p>Where required by law, Glucia will ask for your consent before showing personalized ads (for example, in the European Union).</p>
+  </section>
+
+  <hr/>
+
+  <!-- 7 -->
+  <section>
+    <h2><span class="icon">🗑️</span> Deleting your data</h2>
+    <p>Since all your data is stored locally on your device, you can remove it at any time by:</p>
     <ul>
-      <li>Advertising ID (Android Advertising ID)</li>
-      <li>IP address (approximate location for ad targeting)</li>
-      <li>Device information (model, OS version, screen size)</li>
-      <li>Ad interaction data (impressions, clicks)</li>
+      <li>Deleting individual plants or logs within the app</li>
+      <li>Clearing the app's data from your phone's settings</li>
+      <li>Uninstalling the app</li>
     </ul>
-    <p>We only collect this advertising data if you consent to it. If you're in the EEA, UK, or Switzerland, you'll see a consent screen the first time you open the app. You can change your choice anytime in <strong>Settings → Privacy → Manage Ad Preferences</strong>. If you decline personalised advertising, you'll still see ads, just not tailored to you.</p>
-    <p>Google's privacy policy: <a href="https://policies.google.com/privacy">policies.google.com/privacy</a></p>
+    <p>When you uninstall Glucia, all your data is removed from your device.</p>
+  </section>
 
-    <h3>Google Fonts</h3>
-    <p>The app uses Google Fonts (Nunito and Playfair Display). These are loaded from Google's CDN on first use. Google's servers may log the request (IP address, user-agent). No personal health data is involved.</p>
+  <hr/>
 
-    <h3>Open Food Facts (Barcode Scanner)</h3>
-    <p>When you use the barcode scanner, Glucia queries the Open Food Facts public API to retrieve nutritional information. Your device's IP address is sent as part of a standard HTTP request. No personal data from your profile is transmitted.</p>
-    <p>Open Food Facts privacy policy: <a href="https://world.openfoodfacts.org/privacy">world.openfoodfacts.org/privacy</a></p>
+  <!-- 8 -->
+  <section>
+    <h2><span class="icon">👶</span> Children</h2>
+    <p>Glucia does not knowingly collect any information from children. The app does not ask for personal details from any user, regardless of age.</p>
+  </section>
 
-    <h2>3.3 Step Data Sources: Device Sensor &amp; Health Connect</h2>
-    <p>Glucia can automatically count your steps using one or both of the following sources, depending on your device and the permissions you grant:</p>
+  <hr/>
 
-    <h3>Built-in Step Sensor (Pedometer)</h3>
-    <p>Most Android devices have a hardware step-counter sensor. With your permission (the <strong>Physical Activity</strong> permission), Glucia reads step counts directly from this sensor to update your daily step count in real time.</p>
-    <ul>
-      <li>This data comes directly from your device's motion hardware — no separate app or account is involved.</li>
-      <li>Step counts are used solely to display your daily steps, distance, and calorie estimates inside the app.</li>
-      <li>This data is <strong>never transmitted off your device</strong>.</li>
-      <li>You can revoke this permission at any time via <strong>Android Settings → Apps → Glucia → Permissions → Physical activity</strong>.</li>
-    </ul>
+  <!-- 9 -->
+  <section>
+    <h2><span class="icon">🔄</span> Changes to this policy</h2>
+    <p>If we ever update this privacy policy, the new version will be available on this page. We'll update the date at the top so you always know when it was last changed.</p>
+  </section>
 
-    <h3>Android Health Connect</h3>
-    <p>Glucia can also optionally read step count data from <strong>Android Health Connect</strong>, a system-level service that lets you control which apps can access fitness and health data stored on your device — useful if your steps are recorded by another app or wearable.</p>
-    <ul>
-      <li>Glucia requests read-only access to step count data.</li>
-      <li>This data is used solely to display your daily steps, distance, and calorie estimates inside the app.</li>
-      <li>Step data read from Health Connect is <strong>never transmitted off your device</strong> — it is used only to populate your local Activity tracker.</li>
-      <li>You can review, grant, or revoke this permission at any time via <strong>Android Settings → Apps → Health Connect → App permissions</strong>, or from Glucia's own permission prompt.</li>
-    </ul>
+  <hr/>
 
-    <p>If neither source is available or permission is not granted, you can still log steps manually within the app.</p>
-  </div>
 
-  <!-- 4. HOW WE USE DATA -->
-  <div class="section">
-    <h1>4. How We Use Your Data</h1>
-    <p>Data stored locally is used solely to provide the features of the Glucia app:</p>
-    <ul>
-      <li><strong>Glucose Tracking:</strong> Display readings, calculate averages, estimate A1C, generate time-in-range statistics.</li>
-      <li><strong>Medication Reminders:</strong> Schedule and deliver local push notifications at times you set. Track taken/skipped status.</li>
-      <li><strong>Nutrition Logging:</strong> Record meals, calculate daily macro totals, show carb progress.</li>
-      <li><strong>Activity Tracking:</strong> Record step counts (manual entry, your device's built-in step sensor, or Health Connect), calculate distance and calories, and track progress toward your daily step goal.</li>
-      <li><strong>Hydration Tracking:</strong> Log water intake and track daily hydration progress against your goal.</li>
-      <li><strong>Health Reports:</strong> Generate PDF reports from your local data. Reports are only shared when you explicitly tap the share button.</li>
-      <li><strong>Profile Personalisation:</strong> Show your name in reports, calculate BMI, apply your glucose target range to charts.</li>
-      <li><strong>Advertising:</strong> AdMob data is used by Google to display relevant advertisements, subject to your consent.</li>
-    </ul>
-  </div>
 
-  <!-- 5. DATA SHARING -->
-  <div class="section">
-    <h1>5. Data Sharing and Disclosure</h1>
-    <p>We do not sell, rent, or trade your personal data. We do not have access to your health data. Your health information never leaves your device except in the following cases:</p>
+</main>
 
-    <h3>When You Choose to Share</h3>
-    <p>The PDF export feature generates a report from your local data. This report is only shared when you actively tap the share button and select a recipient. We have no visibility into this sharing.</p>
+<footer>
+  &copy; 2026 Glucia. All rights reserved.
+</footer>
 
-    <h3>Google AdMob</h3>
-    <p>AdMob may collect advertising-related data under its own privacy policy, subject to your consent choice.</p>
-
-    <h3>Android Health Connect</h3>
-    <p>Step data read from Health Connect stays on your device and is not shared with Glucia's developer, AdMob, or any other third party.</p>
-
-    <h3>Legal Requirements</h3>
-    <p>We may disclose information if required by law. Given that all health data is on your device, we typically would not have access to provide such information even if required.</p>
-  </div>
-
-  <!-- 6. STORAGE & SECURITY -->
-  <div class="section">
-    <h1>6. Data Storage, Retention, and Security</h1>
-
-    <h3>Storage Location</h3>
-    <p>All health data is stored in a local SQLite database on your Android device, in the app's private data directory — not accessible to other apps.</p>
-
-    <h3>Retention</h3>
-    <p>Your data is retained for as long as you use the app. It is automatically deleted when you uninstall the app or use the <strong>Delete All My Data</strong> feature in Settings. We retain no copies on any server.</p>
-
-    <h3>Security</h3>
-    <ul>
-      <li>All data is stored in the app's sandboxed private storage</li>
-      <li>No health data is transmitted over the internet</li>
-      <li>The app has no login system — no credentials to steal</li>
-      <li>PDF reports are generated entirely on-device</li>
-    </ul>
-    <p><em>You are responsible for the physical security of your device, including lock screen protection.</em></p>
-  </div>
-
-  <!-- 7. YOUR RIGHTS -->
-  <div class="section">
-    <h1>7. Your Rights</h1>
-    <p>Because all data is stored locally, most rights are exercised directly within the app:</p>
-    <table>
-      <tr><th>Right</th><th>How to Exercise It</th></tr>
-      <tr><td>Access</td><td>All your data is visible within the app at all times.</td></tr>
-      <tr><td>Rectification</td><td>Edit or correct any entry directly within the app.</td></tr>
-      <tr><td>Erasure</td><td>Settings → Danger Zone → Delete All My Data.</td></tr>
-      <tr><td>Data Portability</td><td>Use the PDF Export feature (Report screen).</td></tr>
-      <tr><td>Revoke Step Sensor Access</td><td>Android Settings → Apps → Glucia → Permissions → Physical activity.</td></tr>
-      <tr><td>Revoke Health Connect Access</td><td>Android Settings → Apps → Health Connect → App permissions.</td></tr>
-      <tr><td>Withdraw Ad Consent</td><td>Settings → Privacy → Manage Ad Preferences.</td></tr>
-    </table>
-
-    <h2 id="data-deletion">How to Delete Your Data</h2>
-    <p>You can permanently delete all your data at any time:</p>
-    <ol style="margin: 10px 0 16px 24px;">
-      <li style="margin-bottom: 8px;">Open the Glucia app</li>
-      <li style="margin-bottom: 8px;">Go to <strong>Settings</strong> (bottom navigation bar)</li>
-      <li style="margin-bottom: 8px;">Scroll to the bottom and tap <strong>Danger Zone</strong></li>
-      <li style="margin-bottom: 8px;">Tap <strong>"Delete all my data"</strong></li>
-      <li style="margin-bottom: 8px;">Confirm the deletion</li>
-    </ol>
-    <p>This permanently and immediately deletes all glucose readings, food logs, medications, profile data, activity and water logs, and app preferences from your device. This action cannot be undone.</p>
-    <p>Alternatively, uninstalling the app removes all data automatically.</p>
-    <p>For any data-related requests, use the feedback button inside the app: Settings → Send Feedback</p>
-  </div>
-
-  <!-- 8. ADVERTISING -->
-  <div class="section">
-    <h1>8. Advertising and Consent</h1>
-
-    <h3>Google UMP Consent Flow</h3>
-    <p>Users in the EEA, UK, or Switzerland will see a consent form powered by Google's User Messaging Platform (UMP) before any advertising data is collected. This form appears on first launch and can be accessed again at any time via <strong>Settings → Privacy → Manage Ad Preferences</strong>.</p>
-
-<p>Glucia is free to use. Banner advertisements are shown 
-throughout the app. A rewarded video ad plays before 
-exporting PDF reports, viewing 90-day history, and 
-enabling dark mode. All ads are optional — if an ad 
-  fails to load, the feature unlocks automatically.</p>
-  </div>
-
-  <!-- 9. CHILDREN -->
-  <div class="section">
-    <h1>9. Children's Privacy</h1>
-    <p>Glucia is not directed at children under the age of 13. We do not knowingly collect personal data from children under 13. The app is rated for ages 18 and above on the Google Play Store.</p>
-    <p>If you believe a child has entered data into Glucia, you may delete it using <strong>Settings → Danger Zone → Delete All My Data</strong>, or by uninstalling the app.</p>
-  </div>
-
-  <!-- 10. MEDICAL DISCLAIMER -->
-  <div class="section">
-    <h1>10. Medical Disclaimer</h1>
-    <div class="disclaimer">
-      <h3>⚠️ Important Medical Disclaimer</h3>
-      <p>Glucia is a personal health tracking tool and is <strong>NOT a medical device</strong>.</p>
-      <p>The information displayed — including glucose trends, A1C estimates, nutritional data, and health reports — is for <strong>informational and organisational purposes only</strong>.</p>
-      <p>Glucia does <strong>NOT</strong> provide medical advice, diagnosis, or treatment.</p>
-      <p>Always consult a qualified healthcare professional before making any changes to your diabetes management, diet, or medication.</p>
-      <p>The A1C estimator uses a mathematical formula and is <strong>not</strong> a substitute for a laboratory HbA1c test ordered by your doctor.</p>
-    </div>
-  </div>
-
-  <!-- 11. ATTRIBUTIONS -->
-  <div class="section">
-    <h1>11. Third-Party Services and Attributions</h1>
-    <table>
-      <tr><th>Service / Library</th><th>Purpose</th><th>License</th></tr>
-      <tr><td>Open Food Facts</td><td>Nutritional data for barcode-scanned foods</td><td>ODbL 1.0</td></tr>
-      <tr><td>Google Fonts (Nunito, Playfair Display)</td><td>Typography</td><td>SIL OFL 1.1</td></tr>
-      <tr><td>Flutter &amp; Dart SDK</td><td>App framework</td><td>BSD 3-Clause</td></tr>
-      <tr><td>fl_chart</td><td>Glucose and nutrition charts</td><td>MIT</td></tr>
-      <tr><td>pdf / printing</td><td>PDF report generation</td><td>Apache 2.0</td></tr>
-      <tr><td>Android Health Connect</td><td>Optional step data source</td><td>Google system service</td></tr>
-    </table>
-  </div>
-
-  <!-- 12. INTERNATIONAL TRANSFERS -->
-  <div class="section">
-    <h1>12. International Data Transfers</h1>
-    <p>Because Glucia stores health data locally on your device, no international transfers of your health data occur. Step data read via Android Health Connect also stays entirely on-device. The only international data flows are:</p>
-    <ul>
-      <li>Advertising data processed by Google (AdMob), a US company</li>
-      <li>Barcode lookups sent to Open Food Facts (a French non-profit) when using the scanner</li>
-      <li>Font files loaded from Google's CDN on first use</li>
-    </ul>
-  </div>
-
-  <!-- 13. CHANGES -->
-  <div class="section">
-    <h1>13. Changes to This Policy</h1>
-    <p>We may update this Privacy Policy from time to time. When we make material changes:</p>
-    <ul>
-      <li>We will update the "Effective Date" at the top of this document</li>
-      <li>For significant changes, we may notify you via an in-app notice on next launch</li>
-    </ul>
-    <p>Continued use of Glucia after changes take effect constitutes acceptance of the updated policy.</p>
-    <p style="font-size: 13px; color: #999;"><em>Version 1.2 (July 24, 2026): Simplified the policy's language throughout and removed the detailed legal-basis table in favor of plain-English explanations.</em></p>
-  </div>
-
-  <!-- FOOTER -->
-  <div class="footer">
-    <p><strong style="color: #c0394b;">Glucia — Diabetes Tracker</strong></p>
-  </div>
-
-</div>
 </body>
 </html>
