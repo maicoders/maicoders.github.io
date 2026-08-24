@@ -127,37 +127,10 @@
     li + li { margin-top: 8px; }
     li strong { color: var(--text); }
 
-    .data-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 12px;
-      margin-top: 18px;
-    }
-
-    .data-item {
-      padding: 16px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      background: var(--surface);
-    }
-
-    .data-item strong { display: block; margin-bottom: 4px; }
-    .data-item span { color: var(--muted); font-size: 14px; }
-
-    .notice {
-      margin-top: 18px;
-      padding: 16px;
-      border: 1px solid #5b4725;
-      border-radius: 8px;
-      background: #18140d;
-      color: #e9d5a8;
-    }
-
     footer { padding-top: 28px; color: var(--quiet); font-size: 14px; }
 
     @media (max-width: 620px) {
       .shell { width: min(calc(100% - 24px), var(--max-width)); padding-top: 28px; }
-      .data-grid { grid-template-columns: 1fr; }
       main section { padding: 26px 0; }
     }
   </style>
@@ -169,103 +142,67 @@
       <h1>Privacy Policy</h1>
       <p class="updated">Effective and last updated: August 24, 2026</p>
       <div class="summary">
-        <strong>Your documents are processed on your device.</strong> Filox does not operate an account system or an app-owned server for uploading your documents. The app does use Google services for advertising, consent management, barcode recognition, text recognition, diagnostics, and service security. Those services process the limited technical data described below.
+        <strong>Your documents are processed on your device.</strong> Filox does not require an account and does not upload your documents to a Filox server. Google services used by the app may process limited data for ads, consent, diagnostics, and security as explained below.
       </div>
     </header>
 
     <nav aria-label="Policy sections">
-      <a href="#scope">Scope</a>
-      <a href="#files">Files and permissions</a>
-      <a href="#local-data">Local data</a>
-      <a href="#google-services">Google services</a>
-      <a href="#choices">Your choices</a>
+      <a href="#about">About</a>
+      <a href="#data">Your data</a>
+      <a href="#google">Google services</a>
+      <a href="#retention">Deletion</a>
+      <a href="#security">Security</a>
       <a href="#contact">Contact</a>
     </nav>
 
     <main>
-      <section id="scope">
-        <h2>1. Scope and developer</h2>
-        <p>This policy applies to the Filox Android application, package name <code>com.filox.app</code>, developed by Maicoders. It explains what data the app accesses, what remains on your device, what is sent to service providers, why it is used, and the controls available to you.</p>
-        <p>Filox does not require an account, name, phone number, address, or login. Filox does not sell your documents or document contents.</p>
+      <section id="about">
+        <h2>1. About this policy</h2>
+        <p>This policy applies to the Filox Android app, provided by Maicoders. Filox does not require an account and does not sell your personal data or document contents.</p>
       </section>
 
-      <section id="files">
-        <h2>2. Files, images, camera, and permissions</h2>
-        <h3>Files you choose</h3>
-        <p>When you select a PDF, document, image, archive, or other file through Android's system picker, Filox receives permission to read that item and, when required for a requested edit, write the resulting file. File content is processed locally on your device.</p>
-
-        <h3>All files access</h3>
-        <p>On supported Android versions, Filox may ask you to enable the special "All files access" setting. This access is used only for user-facing file-management features that require a device-wide view, including storage analysis, finding duplicate files, finding large files, and managing files selected from those results. Without this access, you can still use tools that work with files you select through Android's system picker.</p>
-        <p>Filox does not upload files discovered by a storage scan. A scan may read file names, paths, sizes, modification dates, and file bytes when needed to compare content or perform the action you request.</p>
-
-        <h3>Camera</h3>
-        <p>Camera access is used for document capture and QR or barcode scanning. Camera frames and captured images are processed locally. Filox does not request microphone access and does not record audio.</p>
-
-        <h3>Saved output</h3>
-        <p>Files you save are written to <code>/Downloads/Filox</code> or another location you choose through Android. These output files remain on your device until you delete them. If you use Android's share action, the file is sent only to the app or person you choose.</p>
-      </section>
-
-      <section id="local-data">
-        <h2>3. Data stored locally</h2>
-        <div class="data-grid">
-          <div class="data-item"><strong>Recent activity</strong><span>File URI, file name, displayed size, tool used, status, and timestamp. The list is limited to 100 entries.</span></div>
-          <div class="data-item"><strong>Preferences</strong><span>Theme, onboarding state, confirmation settings, favorites, and the expiry time of an ad-supported Pro pass.</span></div>
-          <div class="data-item"><strong>Temporary files</strong><span>Working copies, previews, page renders, and generated output waiting to be saved or shared.</span></div>
-          <div class="data-item"><strong>Permission records</strong><span>Android may retain access grants for files you selected so Filox can reopen them from recent activity.</span></div>
-        </div>
-        <p class="notice">Android cloud backup is disabled for Filox. Locally stored history, preferences, and temporary work are not intentionally uploaded by Filox for backup.</p>
-
-        <h3>Retention and deletion</h3>
-        <p>Local settings and recent activity remain until you remove them, use "Clear All Data" in Filox Settings, clear the app's storage in Android Settings, or uninstall the app. Temporary files may also be removed by Android when storage is needed. Files saved in <code>/Downloads/Filox</code> are not deleted by "Clear All Data" or by uninstalling Filox; you control those files through your device's file manager.</p>
-      </section>
-
-      <section id="google-services">
-        <h2>4. Google services and data sent off-device</h2>
-        <h3>Google Mobile Ads and User Messaging Platform</h3>
-        <p>Filox uses Google AdMob to display banner, interstitial, and opt-in rewarded ads, and Google's User Messaging Platform to collect and manage consent choices where required. According to Google's disclosure for the Mobile Ads SDK, it may automatically collect and share:</p>
+      <section id="data">
+        <h2>2. Data used by Filox</h2>
         <ul>
-          <li>IP address, which may be used to estimate general location;</li>
-          <li>app interactions such as launches, taps, and ad video views;</li>
-          <li>diagnostic information such as app launch time, hang rate, and energy usage; and</li>
-          <li>device or account identifiers, including the Android advertising ID and app set ID where available.</li>
+          <li><strong>Files:</strong> Filox reads files you choose so it can perform the action you request. Processing takes place on your device.</li>
+          <li><strong>Storage access:</strong> If you enable All files access, Filox uses it only for storage analysis, duplicate and large-file searches, and file management. These scans are not uploaded.</li>
+          <li><strong>Camera:</strong> Camera access is used only to scan documents and QR or barcodes. Filox does not record audio.</li>
+          <li><strong>Local app data:</strong> Filox stores recent activity, settings, permission records, and temporary working files on your device.</li>
         </ul>
-        <p>Google uses this data for advertising, analytics, fraud prevention, consent management, and service operation. Data collected by the Mobile Ads SDK is encrypted in transit. Ads may be personalized or non-personalized depending on your region, consent choices, device settings, and Google's policies.</p>
-        <p>Learn more in <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google's Mobile Ads data disclosure</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
+        <p>Files you save remain on your device, normally in <code>/Downloads/Filox</code>. A file is sent to another app or person only when you choose to share or open it with them.</p>
+      </section>
 
-        <h3>Google ML Kit</h3>
-        <p>Filox uses bundled Google ML Kit features for on-device text recognition and barcode scanning. Your image and recognized document content are not sent to Filox servers. Google states that ML Kit SDKs may collect device information, app information, per-installation identifiers, performance metrics, API configuration, feature input/output size, feature versions, event types, and error codes for diagnostics and usage analytics. Google states that this technical data is encrypted in transit and is not transferred to third parties.</p>
-        <p>Learn more in <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google's ML Kit data disclosure</a>.</p>
+      <section id="google">
+        <h2>3. Google services</h2>
+        <p>Filox uses Google AdMob for ads and Google's consent service. Through these services, the app shares the following limited data with Google:</p>
+        <ul>
+          <li>your IP address and approximate location;</li>
+          <li>advertising and device identifiers;</li>
+          <li>interactions with the app and ads; and</li>
+          <li>performance and error information.</li>
+        </ul>
+        <p>Google uses this data for advertising, consent, analytics, fraud prevention, and service operation. Filox also uses Google ML Kit for text and barcode recognition on your device. ML Kit may send Google limited device, app, performance, and error information, but not your document contents.</p>
+        <p>Google controls the data it receives under <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>. Ads may be personalized or non-personalized based on your consent, region, and device settings.</p>
+      </section>
 
-
+      <section id="retention">
+        <h2>4. Retention and deletion</h2>
+        <p>Local app data remains until you use Clear All Data in Filox Settings, clear Filox storage in Android Settings, or uninstall the app. Saved files remain until you delete them yourself. Google keeps data it receives according to its own privacy policy.</p>
+      </section>
 
       <section id="security">
-        <h2>6. Security</h2>
-        <p>Filox reduces exposure by processing document content locally, using Android system pickers for ordinary file selection, requesting special storage access only for device-wide file-management tools, disabling app backup, and relying on Android's app sandbox. Google states that the SDK data described above is encrypted in transit. No application or storage system can guarantee absolute security.</p>
-      </section>
-
-      <section id="children">
-        <h2>7. Children</h2>
-        <p>Filox is a general productivity application and is not directed to children under 13. Maicoders does not knowingly request names, contact details, or accounts from children. The app caps AdMob content at a PG rating. If you believe a child has provided information through a support request, contact us so it can be addressed.</p>
-      </section>
-
-      <section id="choices">
-        <h2>8. Your controls</h2>
+        <h2>5. Security and your choices</h2>
+        <p>Filox processes documents locally, uses Android's app protection, and disables app backup. Google states that data sent by its services is encrypted in transit. No app can guarantee absolute security.</p>
         <ul>
-          <li><strong>File access:</strong> choose individual files through Android's picker, revoke persisted access through "Clear All Data," or disable "All files access" in Android Settings.</li>
-          <li><strong>Camera:</strong> deny or revoke camera permission in Android Settings. File import remains available.</li>
-          <li><strong>Advertising consent:</strong> open Filox Settings and select "Privacy &amp; Consent Choices" where the option is available.</li>
-          <li><strong>Advertising identifier:</strong> reset or delete the advertising ID using your Android privacy settings.</li>
-          <li><strong>Local records:</strong> clear recent history, clear temporary files, or use "Clear All Data" in Filox Settings.</li>
+          <li>You can revoke camera or storage access in Android Settings.</li>
+          <li>You can change available advertising consent choices from Filox Settings.</li>
+          <li>You can clear local app data using Clear All Data.</li>
         </ul>
       </section>
 
-      <section id="changes">
-        <h2>9. Policy changes</h2>
-        <p>We may update this policy when Filox features, SDKs, or legal requirements change. The current version will be posted at this URL with a revised effective date. Material changes will be presented in the app when required.</p>
-      </section>
       <section id="contact">
-        <h2>10. Privacy contact</h2>
-        <p>For privacy questions, data requests, or complaints, contact Maicoders at <a href="mailto:arabkingdomteamhackers@gmail.com">Email/a>. Because Filox has no user accounts or app-owned cloud document storage, most app data can be deleted directly from Filox Settings or Android Settings.</p>
+        <h2>6. Contact</h2>
+        <p>For privacy questions or requests, contact us at <a href="mailto:arabkingdomteamhackers@gmail.com">Gmail/a>.</p>
       </section>
     </main>
 
