@@ -1,171 +1,272 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Privacy Policy – Filox</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Privacy Policy for the Filox Android application.">
+  <title>Privacy Policy | Filox</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      color-scheme: dark;
+      --bg: #07090d;
+      --surface: #0e1219;
+      --surface-strong: #141a24;
+      --border: #273142;
+      --text: #f4f7fb;
+      --muted: #a9b4c5;
+      --quiet: #76849a;
+      --blue: #65a7ff;
+      --green: #45d6a0;
+      --warning: #f5c267;
+      --max-width: 820px;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0d0f14;
-      color: #c9d1e0;
-      line-height: 1.7;
-      padding: 40px 20px 80px;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.7 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
 
-    .container {
-      max-width: 680px;
+    a { color: var(--blue); }
+    a:hover { text-decoration-thickness: 2px; }
+
+    .shell {
+      width: min(calc(100% - 32px), var(--max-width));
       margin: 0 auto;
+      padding: 48px 0 80px;
     }
 
-    .logo {
+    header {
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .brand {
       display: flex;
       align-items: center;
       gap: 12px;
-      margin-bottom: 48px;
-    }
-
-    .logo-icon {
-      width: 44px;
-      height: 44px;
-      background: #1a6fff;
-      border-radius: 10px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 800;
-      font-size: 20px;
-      color: #fff;
-    }
-
-    .logo-text {
-      font-size: 20px;
+      margin-bottom: 32px;
+      color: var(--muted);
+      font-size: 14px;
       font-weight: 700;
-      color: #fff;
     }
 
-    .logo-sub {
-      font-size: 12px;
-      color: #6b7a99;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+    .mark {
+      display: grid;
+      width: 40px;
+      height: 40px;
+      place-items: center;
+      border: 1px solid #337ee6;
+      border-radius: 8px;
+      background: #1264d6;
+      color: white;
+      font-size: 19px;
     }
 
     h1 {
-      font-size: 28px;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 8px;
+      margin: 0 0 8px;
+      font-size: clamp(34px, 7vw, 54px);
+      line-height: 1.08;
+      letter-spacing: 0;
     }
 
-    .updated {
-      font-size: 13px;
-      color: #6b7a99;
-      margin-bottom: 40px;
-    }
+    .updated { margin: 0; color: var(--quiet); font-size: 14px; }
 
-    .highlight-box {
-      background: #131720;
-      border: 1px solid #1e2840;
-      border-left: 3px solid #1a6fff;
+    .summary {
+      margin: 28px 0 0;
+      padding: 20px;
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--green);
       border-radius: 8px;
-      padding: 18px 20px;
-      margin-bottom: 40px;
-      font-size: 15px;
-      color: #a8b4cc;
+      background: var(--surface);
+      color: var(--muted);
+    }
+
+    .summary strong { color: var(--text); }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      padding: 24px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14px;
+    }
+
+    nav a { color: var(--muted); text-decoration: none; }
+    nav a:hover { color: var(--text); }
+
+    main section {
+      padding: 32px 0;
+      border-bottom: 1px solid var(--border);
     }
 
     h2 {
-      font-size: 16px;
-      font-weight: 600;
-      color: #fff;
-      margin-top: 36px;
-      margin-bottom: 10px;
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      font-size: 13px;
+      margin: 0 0 14px;
+      font-size: 22px;
+      line-height: 1.25;
+      letter-spacing: 0;
     }
 
-    p {
-      font-size: 15px;
-      color: #a8b4cc;
-      margin-bottom: 12px;
+    h3 {
+      margin: 24px 0 8px;
+      font-size: 17px;
+      letter-spacing: 0;
     }
 
-    a {
-      color: #1a6fff;
-      text-decoration: none;
+    p { margin: 0 0 14px; color: var(--muted); }
+    p:last-child { margin-bottom: 0; }
+
+    ul { margin: 10px 0 0; padding-left: 22px; color: var(--muted); }
+    li + li { margin-top: 8px; }
+    li strong { color: var(--text); }
+
+    .data-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 18px;
     }
 
-    a:hover { text-decoration: underline; }
-
-    .divider {
-      border: none;
-      border-top: 1px solid #1e2840;
-      margin: 36px 0;
-    }
-
-    .contact {
-      background: #131720;
-      border: 1px solid #1e2840;
+    .data-item {
+      padding: 16px;
+      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 18px 20px;
-      font-size: 14px;
-      color: #6b7a99;
+      background: var(--surface);
     }
 
-    .contact a { color: #1a6fff; }
+    .data-item strong { display: block; margin-bottom: 4px; }
+    .data-item span { color: var(--muted); font-size: 14px; }
+
+    .notice {
+      margin-top: 18px;
+      padding: 16px;
+      border: 1px solid #5b4725;
+      border-radius: 8px;
+      background: #18140d;
+      color: #e9d5a8;
+    }
+
+    footer { padding-top: 28px; color: var(--quiet); font-size: 14px; }
+
+    @media (max-width: 620px) {
+      .shell { width: min(calc(100% - 24px), var(--max-width)); padding-top: 28px; }
+      .data-grid { grid-template-columns: 1fr; }
+      main section { padding: 26px 0; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-
-    <div class="logo">
-      <div class="logo-icon">F</div>
-      <div>
-        <div class="logo-text">Filox</div>
-        <div class="logo-sub">File Studio</div>
+  <div class="shell">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true">F</span> Filox File Studio</div>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Effective and last updated: August 24, 2026</p>
+      <div class="summary">
+        <strong>Your documents are processed on your device.</strong> Filox does not operate an account system or an app-owned server for uploading your documents. The app does use Google services for advertising, consent management, barcode recognition, text recognition, diagnostics, and service security. Those services process the limited technical data described below.
       </div>
-    </div>
+    </header>
 
-    <h1>Privacy Policy</h1>
-    <div class="updated">Last updated: August 23, 2026</div>
+    <nav aria-label="Policy sections">
+      <a href="#scope">Scope</a>
+      <a href="#files">Files and permissions</a>
+      <a href="#local-data">Local data</a>
+      <a href="#google-services">Google services</a>
+      <a href="#choices">Your choices</a>
+      <a href="#contact">Contact</a>
+    </nav>
 
-    <div class="highlight-box">
-      <strong style="color:#fff;">Filox does not collect, store, or transmit any personal data.</strong><br>
-      All file processing happens entirely on your device. Your files never leave your phone.
-    </div>
+    <main>
+      <section id="scope">
+        <h2>1. Scope and developer</h2>
+        <p>This policy applies to the Filox Android application, package name <code>com.filox.app</code>, developed by Maicoders. It explains what data the app accesses, what remains on your device, what is sent to service providers, why it is used, and the controls available to you.</p>
+        <p>Filox does not require an account, name, phone number, address, or login. Filox does not sell your documents or document contents.</p>
+      </section>
 
-    <h2>1. Information We Collect</h2>
-    <p>We do not collect any personal information. Filox does not require an account, login, or registration of any kind.</p>
+      <section id="files">
+        <h2>2. Files, images, camera, and permissions</h2>
+        <h3>Files you choose</h3>
+        <p>When you select a PDF, document, image, archive, or other file through Android's system picker, Filox receives permission to read that item and, when required for a requested edit, write the resulting file. File content is processed locally on your device.</p>
 
-    <h2>2. File Access</h2>
-    <p>Filox requests access to your device storage solely to read and process files you explicitly select. No file content is uploaded, transmitted, or stored outside your device.</p>
+        <h3>All files access</h3>
+        <p>On supported Android versions, Filox may ask you to enable the special "All files access" setting. This access is used only for user-facing file-management features that require a device-wide view, including storage analysis, finding duplicate files, finding large files, and managing files selected from those results. Without this access, you can still use tools that work with files you select through Android's system picker.</p>
+        <p>Filox does not upload files discovered by a storage scan. A scan may read file names, paths, sizes, modification dates, and file bytes when needed to compare content or perform the action you request.</p>
 
-    <h2>3. Camera & Microphone</h2>
-    <p>Filox requests camera permission for the Document Scanner and QR & Barcode Studio and Image features. Camera input is processed locally in real time and is never recorded, stored remotely, or shared.</p>
+        <h3>Camera</h3>
+        <p>Camera access is used for document capture and QR or barcode scanning. Camera frames and captured images are processed locally. Filox does not request microphone access and does not record audio.</p>
 
-    <h2>4. Advertising (AdMob)</h2>
-    <p>Filox displays ads served by Google AdMob. AdMob may collect device identifiers and usage data to serve relevant ads. This is governed by Google's own privacy policy. You can review it at <a href="https://policies.google.com/privacy" target="_blank">policies.google.com/privacy</a>.</p>
-    <p>You can opt out of personalized ads through your device settings under <em>Google → Ads → Opt out of Ads Personalization</em>.</p>
+        <h3>Saved output</h3>
+        <p>Files you save are written to <code>/Downloads/Filox</code> or another location you choose through Android. These output files remain on your device until you delete them. If you use Android's share action, the file is sent only to the app or person you choose.</p>
+      </section>
 
-    <h2>5. Analytics</h2>
-    <p>Filox does not use any analytics SDK or crash reporting service that transmits data to external servers.</p>
+      <section id="local-data">
+        <h2>3. Data stored locally</h2>
+        <div class="data-grid">
+          <div class="data-item"><strong>Recent activity</strong><span>File URI, file name, displayed size, tool used, status, and timestamp. The list is limited to 100 entries.</span></div>
+          <div class="data-item"><strong>Preferences</strong><span>Theme, onboarding state, confirmation settings, favorites, and the expiry time of an ad-supported Pro pass.</span></div>
+          <div class="data-item"><strong>Temporary files</strong><span>Working copies, previews, page renders, and generated output waiting to be saved or shared.</span></div>
+          <div class="data-item"><strong>Permission records</strong><span>Android may retain access grants for files you selected so Filox can reopen them from recent activity.</span></div>
+        </div>
+        <p class="notice">Android cloud backup is disabled for Filox. Locally stored history, preferences, and temporary work are not intentionally uploaded by Filox for backup.</p>
 
-    <h2>6. Third-Party Services</h2>
-    <p>The only third-party service integrated into Filox is Google AdMob. No other external service, API, or backend is used.</p>
+        <h3>Retention and deletion</h3>
+        <p>Local settings and recent activity remain until you remove them, use "Clear All Data" in Filox Settings, clear the app's storage in Android Settings, or uninstall the app. Temporary files may also be removed by Android when storage is needed. Files saved in <code>/Downloads/Filox</code> are not deleted by "Clear All Data" or by uninstalling Filox; you control those files through your device's file manager.</p>
+      </section>
 
-    <h2>7. Children's Privacy</h2>
-    <p>Filox is not directed at children under the age of 13. We do not knowingly collect any information from children.</p>
+      <section id="google-services">
+        <h2>4. Google services and data sent off-device</h2>
+        <h3>Google Mobile Ads and User Messaging Platform</h3>
+        <p>Filox uses Google AdMob to display banner, interstitial, and opt-in rewarded ads, and Google's User Messaging Platform to collect and manage consent choices where required. According to Google's disclosure for the Mobile Ads SDK, it may automatically collect and share:</p>
+        <ul>
+          <li>IP address, which may be used to estimate general location;</li>
+          <li>app interactions such as launches, taps, and ad video views;</li>
+          <li>diagnostic information such as app launch time, hang rate, and energy usage; and</li>
+          <li>device or account identifiers, including the Android advertising ID and app set ID where available.</li>
+        </ul>
+        <p>Google uses this data for advertising, analytics, fraud prevention, consent management, and service operation. Data collected by the Mobile Ads SDK is encrypted in transit. Ads may be personalized or non-personalized depending on your region, consent choices, device settings, and Google's policies.</p>
+        <p>Learn more in <a href="https://developers.google.com/admob/android/privacy/play-data-disclosure">Google's Mobile Ads data disclosure</a> and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</p>
 
-    <h2>8. Changes to This Policy</h2>
-    <p>If this policy changes, the updated version will be posted at this URL with a revised date. Continued use of the app after any change constitutes acceptance of the new policy.</p>
+        <h3>Google ML Kit</h3>
+        <p>Filox uses bundled Google ML Kit features for on-device text recognition and barcode scanning. Your image and recognized document content are not sent to Filox servers. Google states that ML Kit SDKs may collect device information, app information, per-installation identifiers, performance metrics, API configuration, feature input/output size, feature versions, event types, and error codes for diagnostics and usage analytics. Google states that this technical data is encrypted in transit and is not transferred to third parties.</p>
+        <p>Learn more in <a href="https://developers.google.com/ml-kit/android-data-disclosure">Google's ML Kit data disclosure</a>.</p>
 
-    <hr class="divider"/>
 
 
+      <section id="security">
+        <h2>6. Security</h2>
+        <p>Filox reduces exposure by processing document content locally, using Android system pickers for ordinary file selection, requesting special storage access only for device-wide file-management tools, disabling app backup, and relying on Android's app sandbox. Google states that the SDK data described above is encrypted in transit. No application or storage system can guarantee absolute security.</p>
+      </section>
+
+      <section id="children">
+        <h2>7. Children</h2>
+        <p>Filox is a general productivity application and is not directed to children under 13. Maicoders does not knowingly request names, contact details, or accounts from children. The app caps AdMob content at a PG rating. If you believe a child has provided information through a support request, contact us so it can be addressed.</p>
+      </section>
+
+      <section id="choices">
+        <h2>8. Your controls</h2>
+        <ul>
+          <li><strong>File access:</strong> choose individual files through Android's picker, revoke persisted access through "Clear All Data," or disable "All files access" in Android Settings.</li>
+          <li><strong>Camera:</strong> deny or revoke camera permission in Android Settings. File import remains available.</li>
+          <li><strong>Advertising consent:</strong> open Filox Settings and select "Privacy &amp; Consent Choices" where the option is available.</li>
+          <li><strong>Advertising identifier:</strong> reset or delete the advertising ID using your Android privacy settings.</li>
+          <li><strong>Local records:</strong> clear recent history, clear temporary files, or use "Clear All Data" in Filox Settings.</li>
+        </ul>
+      </section>
+
+      <section id="changes">
+        <h2>9. Policy changes</h2>
+        <p>We may update this policy when Filox features, SDKs, or legal requirements change. The current version will be posted at this URL with a revised effective date. Material changes will be presented in the app when required.</p>
+      </section>
+
+    </main>
+
+    <footer>Filox File Studio &middot; Package <code>com.filox.app</code></footer>
   </div>
 </body>
 </html>
