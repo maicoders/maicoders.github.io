@@ -3,94 +3,208 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Privacy Policy - FileFlow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <meta name="description" content="Privacy Policy for FileFlow, a local Wi-Fi file transfer app for Android.">
+  <title>Privacy Policy | FileFlow</title>
   <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b1024;
+      --card: #141a33;
+      --text: #f4f6ff;
+      --muted: #b8c1df;
+      --accent: #55c7ff;
+      --line: #303b65;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f8fafc;
-      color: #334155;
-      line-height: 1.7;
       margin: 0;
-      padding: 24px;
+      padding: 32px 16px 56px;
+      background: linear-gradient(155deg, #0b1024, #121b3b 55%, #0b1024);
+      color: var(--text);
+      font: 16px/1.7 system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
     }
     main {
       max-width: 760px;
-      margin: 30px auto;
-      background: #fff;
-      padding: 36px;
-      border-radius: 14px;
+      margin: auto;
+      padding: 34px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 20px;
     }
-    h1 { color: #0f172a; font-size: 28px; }
+    h1 {
+      font-size: clamp(26px, 5vw, 32px);
+      line-height: 1.25;
+      margin: 0 0 6px;
+    }
     h2 {
-      color: #1e293b;
-      font-size: 18px;
-      margin-top: 28px;
+      font-size: 19px;
+      line-height: 1.4;
+      margin: 27px 0 7px;
     }
-    .date { color: #64748b; font-size: 14px; }
-    a { color: #2563eb; }
-    @media (max-width: 600px) {
-      main { padding: 22px; margin: 0; }
+    p, li { color: var(--muted); }
+    p { margin: 8px 0 14px; }
+    ul { padding-left: 22px; margin-top: 8px; }
+    li { margin-bottom: 8px; }
+    strong { color: var(--text); }
+    a { color: var(--accent); overflow-wrap: anywhere; }
+    .date { font-size: 14px; margin: 0 0 24px; }
+    .intro {
+      background: #1a2849;
+      border: 1px solid #385480;
+      border-radius: 14px;
+      padding: 15px 18px;
+    }
+    .intro p { margin: 0; color: var(--text); }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 20px;
+    }
+    @media(max-width:520px) {
+      body { padding: 14px 10px 36px; }
+      main { padding: 22px 18px; border-radius: 16px; }
     }
   </style>
 </head>
 <body>
-  <main>
-    <h1>Privacy Policy</h1>
-    <p class="date">Last updated: November 21, 2026</p>
+<main>
+  <h1>FileFlow Privacy Policy</h1>
+  <p class="date">Last updated: November 21, 2026</p>
 
-    <p>FileFlow respects your privacy.</p>
-
-    <h2>Information We Collect</h2>
+  <div class="intro">
     <p>
-      FileFlow does not require an account or collect
-      personal files. Files are transferred directly
-      between your devices over a local Wi-Fi network
-      and are not uploaded to our servers.
+      <strong>FileFlow transfers files directly between
+      your Android phone and your computer over local
+      Wi-Fi.</strong>
+      This version does not require an account and does
+      not include advertising, analytics, or cloud file
+      storage.
     </p>
+  </div>
 
-    <h2>Advertising</h2>
-    <p>
-      FileFlow uses Google AdMob to display advertisements.
-      Google may collect certain information for advertising
-      purposes. Learn more in
-      <a href="https://policies.google.com/privacy">
-        Google's Privacy Policy
-      </a>.
-    </p>
+  <h2>1. Information and file access</h2>
+  <p>
+    FileFlow accesses files you choose to send or receive.
+    Files move between your connected devices, not through
+    a developer-operated server. According to the current
+    app implementation, FileFlow does not send your files,
+    transfer history, or usage data to the developer or
+    advertising or analytics services.
+  </p>
 
-    <h2>Permissions</h2>
-    <p>
-      FileFlow uses device permissions only to provide
-      file transfer and related features.
-    </p>
+  <h2>2. Information stored on your device</h2>
+  <ul>
+    <li>
+      <strong>Preferences:</strong> device name, connection
+      approval and timeout settings, save-folder choice,
+      and other app preferences.
+    </li>
+    <li>
+      <strong>Optional transfer history:</strong> up to
+      200 local records, which may include file names,
+      sizes, transfer direction, status, time, speed,
+      and save location. You can disable history or
+      clear it in
+      <strong>Settings → Privacy &amp; data →
+      Clear transfer history</strong>.
+    </li>
+    <li>
+      <strong>Temporary shared-file copies:</strong>
+      files you select to share may be staged in the
+      app's cache. These copies are removed when you
+      remove them from sharing, stop sharing, or
+      uninstall the app.
+    </li>
+    <li>
+      <strong>Received files:</strong> stored in
+      Downloads/FileFlow by default on supported Android
+      versions, or in a folder you choose. On Android 9
+      and earlier, the default is an app-specific folder.
+    </li>
+    <li>
+      <strong>Pairing information:</strong> pairing codes
+      and active connection sessions are kept temporarily
+      on the phone and expire or end when sharing stops.
+    </li>
+  </ul>
 
-    <h2>Data Security</h2>
-    <p>
-      File transfers take place over your local network.
-      FileFlow does not store your files on external servers.
-    </p>
+  <h2>3. Local network and security</h2>
+  <p>
+    FileFlow runs a local server while sharing is active.
+    Computers must pair before accessing shared files;
+    phone approval is enabled by default. You can
+    disconnect a computer or stop sharing.
+  </p>
+  <p>
+    <strong>Local file transfers use HTTP and are not
+    encrypted.</strong>
+    Someone able to intercept traffic on your network
+    could read transferred information. Use FileFlow
+    only on trusted, private networks. The Android
+    INTERNET permission is used for local network
+    communication; it does not mean that file transfers
+    use cloud servers.
+  </p>
 
-    <h2>Children's Privacy</h2>
-    <p>
-      FileFlow is not specifically designed for
-      children under 13.
-    </p>
+  <h2>4. Data retention and deletion</h2>
+  <p>
+    You can clear transfer history in the app. Stopping
+    sharing removes staged shared-file copies and ends
+    active sessions. Uninstalling the app removes its
+    private settings, history, and cache. Files saved
+    to a public Downloads folder or another folder you
+    selected may remain after uninstalling; delete
+    those files using your file manager. Files already
+    transferred to a computer must be managed on that
+    computer.
+  </p>
+  <p>
+    FileFlow does not maintain a developer-operated
+    account or file database, so there is no
+    developer-held account or file archive to delete.
+  </p>
 
-    <h2>Changes</h2>
-    <p>
-      We may update this Privacy Policy when necessary.
-      Changes will be posted on this page.
-    </p>
+  <h2>5. Third-party services and advertising</h2>
+  <p>
+    This version of FileFlow does not include AdMob,
+    advertising SDKs, analytics SDKs, or cloud services.
+    If these practices change in a future release,
+    this policy will be updated.
+  </p>
+  <p>
+    Opening this privacy policy may connect your browser
+    to the website hosting it. That website may process
+    standard connection information under its own
+    privacy practices.
+  </p>
 
-    <h2>Contact</h2>
-    <p>
-      For privacy questions, contact:
-      <a href="mailto:maicoders101@gmail.com">
-        Email
-      </a>
-    </p>
-  </main>
+  <h2>6. Children's privacy</h2>
+  <p>
+    FileFlow is a general-purpose utility and is not
+    specifically directed at children.
+  </p>
+
+  <h2>7. Changes</h2>
+  <p>
+    We may update this policy to reflect changes to
+    FileFlow. The latest version and update date
+    will be published here.
+  </p>
+
+  <h2>8. Contact</h2>
+  <p>
+    Developer: <strong>MAI Coder's</strong>
+    <br>
+    Privacy questions:
+    <a href="mailto:maicoders101@gmail.com">
+      Email
+    </a>
+  </p>
+</main>
+
+<footer>FileFlow · Local Wi-Fi file transfer</footer>
 </body>
 </html>
